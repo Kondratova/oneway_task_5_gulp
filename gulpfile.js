@@ -1,12 +1,15 @@
-let { watch, src, dest, parallel, series  } = require('gulp');
-let browserSync = require('browser-sync');
-let del = require('del');
-let imagemin = require('gulp-imagemin');
-let sass = require('gulp-sass');
-let postcss = require('gulp-postcss');
-let autoprefixer = require('autoprefixer');
-let cssnano = require('cssnano');
-let twig = require('gulp-twig');
+//Использую константы, тк эти данные не должны быть переопределены
+const { watch, src, dest, parallel, series  } = require('gulp');
+const browserSync = require('browser-sync');
+const del = require('del');
+const imagemin = require('gulp-imagemin');
+const imageminJpegtran = require('imagemin-jpegtran');
+const sass = require('gulp-sass');
+const postcss = require('gulp-postcss');
+const autoprefixer = require('autoprefixer');
+const cssnano = require('cssnano');
+const twig = require('gulp-twig');
+const typograf = require('gulp-typograf');
 
 // Девсервер
 function devServer(cb) {
@@ -21,23 +24,20 @@ function devServer(cb) {
     cb();
 }
 
+//Удаление всех файлов в папках
 function clearBuild() {
-    return del(['build/*.*',
-        'build/styles/*.*',
-        'build/scripts/*.*',
-        'build/assets/fonts/*.*',
-        'build/assets/img/*.*',
-        'build/assets/img/icons/*.*']);
+    return del('build/**/**/**/*.*');
 }
 
-// Сборка
+// Сборка из twig в html и типографирование
 function buildPages() {
-    // Пути можно передавать массивами
-    return src(['src/pages/*.twig', 'src/pages/*.html'])
+    return src('src/pages/*.twig')
         .pipe(twig())
+        .pipe(typograf({ locale: ['ru', 'en-US'] }))
         .pipe(dest('build/'));
 }
 
+//Сборка из scss в css с добавлением префиксов и минимизированием
 function buildStyles() {
     return src('src/styles/*.scss')
         .pipe(sass())
@@ -53,6 +53,7 @@ function buildScripts() {
         .pipe(dest('build/scripts/'));
 }
 
+//Минимизация изображений
 function buildAssets(cb) {
     // Уберём пока картинки из общего потока
     src(['src/assets/**/*.*', '!src/assets/img/**/*.*'])
