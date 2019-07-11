@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 2</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+<div class="container" itemscope itemtype="https://schema.org/Person">
+    <div class = "foto">
+        <img src="assets/img/3.jpg" alt="Хаяо Миядзаки" itemprop="image">
+    </div>
+    <div class="buttonLeft i-left"></div>
+    <div class="buttonRight i-right"></div>
+    <div class="name" itemprop="name"><h1 class="i-totoro">Хаяо Миядзаки</h1></div>
+    <div class="data"><time itemprop="birthDate" datetime="1941-01-05">5 января 1941</time> <br> <span itemprop="birthPlace">Япония, Токио</span> <br> <span itemprop="hasOccupation">Художник-мультипликатор, мангака, художник по персонажам</span></div>
+    <div class="about">
+        <p>Японский режиссёр-аниматор, продюсер, сценарист, писатель и мангака. Он родился в семье владельца авиационной фабрики, с детства увлекся рисованием манги и анимацией. В 1964 году он познакомился с Исао Такахатой, совместно с которым впоследствии основал анимационную студию Studio Ghibli. На протяжении длительного времени они вместе работали над множеством художественных произведений.</p>
+        <p>Хаяо Миядзаки — обладатель внеконкурсного почётного «Оскара» 2014 года.</p>
+
+    </div>
+    <div class="works" itemscope itemtype="https://schema.org/CreativeWork">
+        {% set works = [
+            { name: 'Небесный замок Лапута', year: '1986'},
+            { name: 'Мой сосед Тоторо', year: '1988'},
+            { name: 'Могила светлячков', year: '1988'},
+            { name: 'Могила светлячков', year: '1989'},
+            { name: 'Порко Россо', year: '1992'},
+            { name: 'Шёпот сердца', year: '1995'},
+            { name: 'Принцесса Мононокэ', year: '1997'},
+            { name: 'Унесённые призраками', year: '2001'},
+            { name: 'Ходячий замок', year: '2001'},
+            { name: 'Сказания Земноморья', year: '2006'},
+            { name: 'Рыбка Поньо на утёсе', year: '2008'},
+            { name: 'Ариэтти из страны лилипутов', year: '2010'},
+            { name: 'Со склонов Кокурико', year: '2011'},
+            { name: 'Ветер крепчает', year: '2012'},
+            { name: 'Как поживаешь?', year: 'ожидаем'},
+        ] %}
+
+        <h2>Работы</h2>
+        <ul>
+            {% for work in works %}
+                {% if work.name %}
+                    <li >
+                        <time itemprop="datePublished" datetime="{{work.year}}">{{work.year}}</time> - <span itemprop="name">{{work.name}}</span>
+                    </li>
+                {% else %}
+                    <li>
+                        ! Ошибка !
+                    </li>
+                {% endif %}
+            {% endfor %}
+        </ul>
+    </div>
+</div>
+</body>
+</html>

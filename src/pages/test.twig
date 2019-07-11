@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Task 2</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+<h1>Hi!</h1>
+<p><figure class='i-sun xxx'></figure>Вот мы и обновляемся</p>
+<a href="">1</a>
+<a href="">2</a>
+<ul>
+    {% for i in 1..10 %}
+        <li>
+            Item #{{i}}
+        </li>
+    {% endfor %}
+</ul>
+
+{% set persons = [
+    { name: 'Василий', surname: 'Иванович' },
+    { name: 'Порфирий', surname: 'Петрович' },
+    { name: 'Александр'},
+    { name: undefined },
+] %}
+
+<h2>Люди</h2>
+<ul>
+    {% for person in persons %}
+        {% if person.name %}
+            <li>
+                {{person.name}} {{person.surname}}
+            </li>
+        {% else %}
+            <li>
+                ! Неизвестный человек
+            </li>
+        {% endif %}
+    {% endfor %}
+</ul>
+
+{#{% include 'blocks/footer.html' %}#}
+</body>
+</html>
