@@ -1,12 +1,18 @@
 //@import "../fonts";
 //@import "../icons";
 
+$screen-sm: 375px;
+$screen-md: 769px;
+$screen-jg: 1000px;
+$screen-xl: 1366px;
 $color-text: #333;
 $font-family-default: 'Arial', sans-serif;
 $transition-fast: .25s;
 $background-block-color: #ddfab9;
 
+//сss переменные как пример для себя
 :root {
+  --color-link: #256b00;
 }
 
 body, p, h1, h2 {
@@ -14,6 +20,7 @@ body, p, h1, h2 {
   padding: 0;
 }
 
+//стили для иконочного шрифта
 @font-face {
   font-family: 'Icons';
   src: url('../assets/fonts/fontello.woff2?25313669') format('woff2'),
@@ -21,7 +28,7 @@ body, p, h1, h2 {
   font-weight: normal;
   font-style: normal;
 }
-
+//добавила after, тк хотела иконку с двух сторон имени
 [class^="i-"]:before, [class*=" i-"]:before, [class^="i-"]:after, [class*=" i-"]:after {
   font-family: "Icons";
   font-style: normal;
@@ -30,10 +37,7 @@ body, p, h1, h2 {
 }
 
 .i-right:before { content: '\e803'; }
-.i-totoro:before { content: '\e804'; }
-
-.i-totoro:after { content: '\e804'; }
-
+.i-totoro:before, .i-totoro:after { content: '\e804'; }
 .i-left:before { content: '\e805'; }
 
 body {
@@ -42,84 +46,108 @@ body {
   font-family: $font-family-default;
 }
 
-.container{
+.container {
   padding: 2vw;
   box-sizing: border-box;
   display: grid;
   grid-gap: 10px;
 
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: $screen-md) {
 
     grid-template-areas: "a a"
-                         "b c"
-                         "d d"
-                         "e e"
-                         "f f"
-                         "g g";
+    "b c"
+    "d d"
+    "e e"
+    "f f"
+    "g g";
     grid-template: repeat(auto-fill, 1fr)
                   /repeat(auto-fill, 1fr);
   }
 
-  @media screen and (min-width: 600px){
+  @media screen and (min-width: $screen-md){
     min-height: 100vh;
     grid-template-areas: "a a d g"
-                         "a a e g"
-                         "a a f g"
-                         "b c f g";
+    "a a e g"
+    "a a f g"
+    "b c f g";
     grid-template-columns: minmax(100px, 12%)
-                           minmax(100px, 12%)
-                           minmax(250px, 3fr)
-                           minmax(150px, 20%);
+    minmax(100px, 12%)
+    minmax(250px, 3fr)
+    minmax(150px, 20%);
     grid-template-rows: auto auto 1fr auto;
   }
 
-  div {
-    background: $background-block-color;
-    font-size: 1em;
-    padding: .5em;
-    border: black solid 1px;
+  @media screen and (min-width: $screen-xl){
+    width: 80%;
+    margin: 0 auto;
+  }
+}
+
+div {
+  font-size: 1em;
+  padding: 10px 15px;
+  border-radius: 15px;
+  overflow: hidden;
+  //border: black solid 1px;
+}
+
+.foto {
+  grid-area: a;
+  padding: 0;
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.buttonLeft {
+  grid-area: b;
+  text-align: center;
+}
+
+.buttonRight {
+  grid-area: c;
+  text-align: center;
+}
+
+.name {
+  grid-area: d;
+  text-align: center;
+}
+
+h1{
+  @media screen and (max-width: $screen-md) {
+    font-size: 8vw;
   }
 
-  .foto {
-    grid-area: a;
+}
+.info {
+  grid-area: e;
+  background: $background-block-color;
+
+  a{
+    text-decoration: none;
+    color: var(--color-link);
+
+    &:hover{
+      font-weight: bold;
+    }
+  }
+}
+
+.about {
+  grid-area: f;
+  text-align: justify;
+  background: $background-block-color;
+}
+
+.works {
+  grid-area: g;
+  background: $background-block-color;
+  ul {
+    list-style-type: none;
     padding: 0;
-    img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-  }
-
-  .buttonLeft {
-    grid-area: b;
-    text-align: center;
-  }
-
-  .buttonRight {
-    grid-area: c;
-    text-align: center;
-  }
-
-  .name {
-    grid-area: d;
-    text-align: center;
-  }
-
-  .data {
-    grid-area: e;
-    text-align: center;
-  }
-
-  .about {
-    grid-area: f;
-  }
-
-  .works {
-    grid-area: g;
-    ul {
-      list-style-type: none;
-      padding: 0;
-    }
   }
 }
 

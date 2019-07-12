@@ -3,7 +3,6 @@ const { watch, src, dest, parallel, series  } = require('gulp');
 const browserSync = require('browser-sync');
 const del = require('del');
 const imagemin = require('gulp-imagemin');
-const imageminJpegtran = require('imagemin-jpegtran');
 const sass = require('gulp-sass');
 const postcss = require('gulp-postcss');
 const autoprefixer = require('autoprefixer');
@@ -55,11 +54,10 @@ function buildScripts() {
 
 //Минимизация изображений
 function buildAssets(cb) {
-    // Уберём пока картинки из общего потока
     src(['src/assets/**/*.*', '!src/assets/img/**/*.*'])
         .pipe(dest('build/assets/'));
 
-    src('src/assets/img/**/*.*')
+    src(['src/assets/img/**/*.*', '!src/assets/img/icons/*.svg'])
         .pipe(imagemin())
         .pipe(dest('build/assets/img'));
 
@@ -77,7 +75,6 @@ function watchFiles() {
 
 // Указываем функции, которые будут доступны из терминала
 // Команда «по умолчанию» -- default -- будет срабатывать при вызове gulp без аргументов
-
 exports.default =
     series(
         clearBuild,

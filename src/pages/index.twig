@@ -1,10 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Task 2</title>
-    <link rel="stylesheet" href="styles/style.css">
+    {% include "blocks/meta.html" %}
 </head>
 <body>
 <div class="container" itemscope itemtype="https://schema.org/Person">
@@ -14,13 +11,13 @@
     <div class="buttonLeft i-left"></div>
     <div class="buttonRight i-right"></div>
     <div class="name" itemprop="name"><h1 class="i-totoro">Хаяо Миядзаки</h1></div>
-    <div class="data"><time itemprop="birthDate" datetime="1941-01-05">5 января 1941</time> <br> <span itemprop="birthPlace">Япония, Токио</span> <br> <span itemprop="hasOccupation">Художник-мультипликатор, мангака, художник по персонажам</span></div>
-    <div class="about">
-        <p>Японский режиссёр-аниматор, продюсер, сценарист, писатель и мангака. Он родился в семье владельца авиационной фабрики, с детства увлекся рисованием манги и анимацией. В 1964 году он познакомился с Исао Такахатой, совместно с которым впоследствии основал анимационную студию Studio Ghibli. На протяжении длительного времени они вместе работали над множеством художественных произведений.</p>
-        <p>Хаяо Миядзаки — обладатель внеконкурсного почётного «Оскара» 2014 года.</p>
-
+    <div class="info">
+        {% include "blocks/info.html" %}
     </div>
-    <div class="works" itemscope itemtype="https://schema.org/CreativeWork">
+    <div class="about" itemprop="description">
+        {% include "blocks/about.html" %}
+    </div>
+    <div class="works">
         {% set works = [
             { name: 'Небесный замок Лапута', year: '1986'},
             { name: 'Мой сосед Тоторо', year: '1988'},
@@ -43,7 +40,7 @@
         <ul>
             {% for work in works %}
                 {% if work.name %}
-                    <li >
+                    <li itemprop="subjectOf" itemscope itemtype="https://schema.org/CreativeWork">
                         <time itemprop="datePublished" datetime="{{work.year}}">{{work.year}}</time> - <span itemprop="name">{{work.name}}</span>
                     </li>
                 {% else %}
