@@ -4,9 +4,11 @@
 
     //Изменяет значение css переменной отвечающей за значение opacity
     function slider(imgs, current) {
-        for (let i = 0; i < imgs.length; i++) {
-            imgs[i].style.setProperty("--hide-img", "0");
-        }
+
+        // for (let i = 0; i < imgs.length; i++) {
+        imgs.forEach(function(element){
+            element.style.setProperty("--hide-img", "0");
+        });
         imgs[current].style.setProperty("--hide-img", "1");
     }
 
