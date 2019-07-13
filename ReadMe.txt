@@ -4,7 +4,8 @@
 	UI: http://localhost:3001
 	UI External: http://localhost:3001
 
-Проверяла микроразметку на:
+Проверять микроразметку на:
 	https://search.google.com/structured-data/testing-tool?hl=ru
 
+Комментарии оставляю по ходу кода
 

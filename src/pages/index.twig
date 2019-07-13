@@ -6,7 +6,11 @@
 <body>
 <div class="container" itemscope itemtype="https://schema.org/Person">
     <div class = "foto">
-        <img src="assets/img/3.jpg" alt="Хаяо Миядзаки" itemprop="image">
+        <div class="slider">
+            <img src="assets/img/1.jpg" alt="Хаяо Миядзаки" itemprop="image">
+            <img src="assets/img/2.jpg" alt="Хаяо Миядзаки" itemprop="image">
+            <img src="assets/img/3.jpg" alt="Хаяо Миядзаки" itemprop="image">
+        </div>
     </div>
     <div class="buttonLeft i-left"></div>
     <div class="buttonRight i-right"></div>
@@ -35,7 +39,6 @@
             { name: 'Ветер крепчает', year: '2012'},
             { name: 'Как поживаешь?', year: 'ожидаем'},
         ] %}
-
         <h2>Работы</h2>
         <ul>
             {% for work in works %}
@@ -52,5 +55,6 @@
         </ul>
     </div>
 </div>
+<script src="scripts/script.js" ></script>
 </body>
 </html>

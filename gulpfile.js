@@ -25,7 +25,7 @@ function devServer(cb) {
 
 //Удаление всех файлов в папках
 function clearBuild() {
-    return del('build/**/**/**/*.*');
+    return del('build/**/*.*');
 }
 
 // Сборка из twig в html и типографирование
@@ -48,7 +48,7 @@ function buildStyles() {
 }
 
 function buildScripts() {
-    return src('src/scripts/**/*.scripts')
+    return src('src/scripts/**/*.js')
         .pipe(dest('build/scripts/'));
 }
 
