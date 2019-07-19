@@ -5,50 +5,50 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
 !function (e) {
   var r = {};
 
-  function t(o) {
-    if (r[o]) return r[o].exports;
-    var n = r[o] = {
-      i: o,
+  function o(t) {
+    if (r[t]) return r[t].exports;
+    var n = r[t] = {
+      i: t,
       l: !1,
       exports: {}
     };
-    return e[o].call(n.exports, n, n.exports, t), n.l = !0, n.exports;
+    return e[t].call(n.exports, n, n.exports, o), n.l = !0, n.exports;
   }
 
-  t.m = e, t.c = r, t.d = function (e, r, o) {
-    t.o(e, r) || Object.defineProperty(e, r, {
+  o.m = e, o.c = r, o.d = function (e, r, t) {
+    o.o(e, r) || Object.defineProperty(e, r, {
       enumerable: !0,
-      get: o
+      get: t
     });
-  }, t.r = function (e) {
+  }, o.r = function (e) {
     "undefined" != typeof Symbol && Symbol.toStringTag && Object.defineProperty(e, Symbol.toStringTag, {
       value: "Module"
     }), Object.defineProperty(e, "__esModule", {
       value: !0
     });
-  }, t.t = function (e, r) {
-    if (1 & r && (e = t(e)), 8 & r) return e;
+  }, o.t = function (e, r) {
+    if (1 & r && (e = o(e)), 8 & r) return e;
     if (4 & r && "object" == _typeof(e) && e && e.__esModule) return e;
-    var o = Object.create(null);
-    if (t.r(o), Object.defineProperty(o, "default", {
+    var t = Object.create(null);
+    if (o.r(t), Object.defineProperty(t, "default", {
       enumerable: !0,
       value: e
     }), 2 & r && "string" != typeof e) for (var n in e) {
-      t.d(o, n, function (r) {
+      o.d(t, n, function (r) {
         return e[r];
       }.bind(null, n));
     }
-    return o;
-  }, t.n = function (e) {
+    return t;
+  }, o.n = function (e) {
     var r = e && e.__esModule ? function () {
       return e["default"];
     } : function () {
       return e;
     };
-    return t.d(r, "a", r), r;
-  }, t.o = function (e, r) {
+    return o.d(r, "a", r), r;
+  }, o.o = function (e, r) {
     return Object.prototype.hasOwnProperty.call(e, r);
-  }, t.p = "", t(t.s = 0);
+  }, o.p = "", o(o.s = 0);
 }([function (e, r) {
   $(".js_slider_1_for").slick({
     slidesToShow: 1,
@@ -73,5 +73,11 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
     slidesToShow: 1,
     centerMode: !0,
     variableWidth: !0
+  }), $(".js_show_specification").magnificPopup({
+    type: "inline",
+    preloader: !1,
+    callbacks: {
+      beforeOpen: function beforeOpen() {}
+    }
   });
 }]);

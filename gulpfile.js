@@ -48,8 +48,8 @@ function buildStyles(cd) {
         ]))
         .pipe(dest('build/styles/'));
 
-    src('src/styles/slick/*.css')
-        .pipe(dest('build/styles/slick'));
+    src(['src/styles/slick/*.css', 'src/styles/magnific/*.css'])
+        .pipe(dest('build/styles/'));
     cd();
 }
 
@@ -59,7 +59,9 @@ function buildScripts(cb) {
         .pipe(babel({ presets: ['@babel/env'] }))
         .pipe(dest('build/scripts/'));
 
-    src('src/scripts/slick/*.js')
+    src(['src/scripts/slick/*.js',
+        'src/scripts/magnific/*.js',
+        'src/scripts/api/*.js'])
         .pipe(babel({ presets: ['@babel/env'] }))
         .pipe(dest('build/scripts/'));
     cb();

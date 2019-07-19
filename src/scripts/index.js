@@ -33,3 +33,14 @@ $('.js_slider_2').slick({
     centerMode: true,
     variableWidth: true
 });
+
+    $('.js_show_specification').magnificPopup({
+        type: 'inline',
+        preloader: false,
+
+        // When elemened is focused, some mobile browsers in some cases zoom in
+        // It looks not nice, so we disable it:
+        callbacks: {
+            beforeOpen: function() {}
+        }
+    });
