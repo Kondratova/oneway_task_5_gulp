@@ -6,6 +6,7 @@
 <meta name="description" content="">
 <meta name="keywords" content="">
 <meta name="theme-color" content="">
+<meta name="format-detection" content="telephone=no"/>
 <title>Task 3</title>
 <link rel="stylesheet" href="styles/style.css">
 <link rel="stylesheet" type="text/css" href="styles/slick/slick.css"/>
@@ -20,38 +21,72 @@
 <body>
 <div class="container">
     <div class="main">
-        <div class="info">
-            <h1>Репро<br>дукцио</h1>
-            <p>Оффлфйн-магазин репродукций шедевров мирового искуства</p>
-            <p>Санкт-Петербург, ул. Адмирала Черокова, 18</p>
-            <p>+7 (812) 960-22-01</p>
-            <p>shop@reproduct.io</p>
+        <div class="">
+            <div class="logo">
+                <h1>Репро<br>дукцио</h1>
+                <p>Оффлфйн-магазин репродукций <br> шедевров мирового искуства</p>
+            </div>
+            <div class="info">
+                <p>Санкт-Петербург, <br> ул. Адмирала Черокова, 18</p>
+                <p x-ms-format-detection="none" >+7 (812) 960-22-01</p>
+                <p><a href="mailto:shop@reproduct.io">shop@reproduct.io</a></p>
+            </div>
         </div>
         <div class="js_slider_1_for">
 
-                <div class="slide"><img src="assets/img/1.jpg" alt=""></div>
+<div class="slide">
+    <img src="assets/img/1.jpg" alt="">
+    <div class="sl_text">
+        <h3 class="sl_head">Слайд 1</h3>
+        <p class="sl_description">Описание слайда 1</p>
+    </div>
+</div>
 
-                <div class="slide"><img src="assets/img/2.jpg" alt=""></div>
+<div class="slide">
+    <img src="assets/img/2.jpg" alt="">
+    <div class="sl_text">
+        <h3 class="sl_head">Слайд 2</h3>
+        <p class="sl_description">Описание слайда 2</p>
+    </div>
+</div>
 
-                <div class="slide"><img src="assets/img/3.jpg" alt=""></div>
+<div class="slide">
+    <img src="assets/img/3.jpg" alt="">
+    <div class="sl_text">
+        <h3 class="sl_head">Слайд 3</h3>
+        <p class="sl_description">Описание слайда 3</p>
+    </div>
+</div>
 
-                <div class="slide"><img src="assets/img/4.jpg" alt=""></div>
+<div class="slide">
+    <img src="assets/img/4.jpg" alt="">
+    <div class="sl_text">
+        <h3 class="sl_head">Слайд 4</h3>
+        <p class="sl_description">Описание слайда 4</p>
+    </div>
+</div>
 
-                <div class="slide"><img src="assets/img/5.jpg" alt=""></div>
+<div class="slide">
+    <img src="assets/img/5.jpg" alt="">
+    <div class="sl_text">
+        <h3 class="sl_head">Слайд 5</h3>
+        <p class="sl_description">Описание слайда 5</p>
+    </div>
+</div>
 
         </div>
         <div class="sliderMain">
             <div class="js_slider_1_nav">
 
-                    <div class="slide"><img src="assets/img/1.jpg" alt=""></div>
+<div class="slide"><img src="assets/img/1.jpg" alt=""></div>
 
-                    <div class="slide"><img src="assets/img/2.jpg" alt=""></div>
+<div class="slide"><img src="assets/img/2.jpg" alt=""></div>
 
-                    <div class="slide"><img src="assets/img/3.jpg" alt=""></div>
+<div class="slide"><img src="assets/img/3.jpg" alt=""></div>
 
-                    <div class="slide"><img src="assets/img/4.jpg" alt=""></div>
+<div class="slide"><img src="assets/img/4.jpg" alt=""></div>
 
-                    <div class="slide"><img src="assets/img/5.jpg" alt=""></div>
+<div class="slide"><img src="assets/img/5.jpg" alt=""></div>
 
             </div>
         </div>
@@ -62,28 +97,38 @@
             <p>Нестареющая классика и бестселлеры.</p>
         </div>
         <div class="sliderPopular">
-            2 слайдер
-            <div class="sl_2">
+            <div class="js_slider_2">
 
-                    <div class="slide"><img src="assets/img/1.jpg" alt=""></div>
+<div class="slide"><img src="assets/img/1.jpg" alt=""></div>
 
-                    <div class="slide"><img src="assets/img/2.jpg" alt=""></div>
+<div class="slide"><img src="assets/img/2.jpg" alt=""></div>
 
-                    <div class="slide"><img src="assets/img/3.jpg" alt=""></div>
+<div class="slide"><img src="assets/img/3.jpg" alt=""></div>
 
             </div>
         </div>
     </div>
     <footer>
+        <div></div>
         <div class="info">
-            <h2>Нараписать нам</h2>
-            <p>Заполните форму справа или отправте письмо на shop@reproduct.io</p>
-            <p>Репродукцио, 2019</p>
-            <p><a href="">Правила обработки персональных данных</a></p>
+            <div class="top">
+                <h2>Написать нам</h2>
+                <p>Заполните форму справа <br> или отправте письмо на <a href="mailto:shop@reproduct.io">shop@reproduct.io</a></p>
+            </div>
+            <div></div>
+            <div class="bottom">
+                <p>Репродукцио, 2019</p>
+                <p><a href="">Правила обработки персональных данных</a></p>
+            </div>
         </div>
-        <div class="forma">
-            forma
+        <div class="container_form">
+            <form action="">
+                <input type="text" placeholder="Эл. почта">
+                <textarea placeholder="Сообщение"></textarea>
+                <input type="submit" class="button" value="Отправить сообщение">
+            </form>
         </div>
+        <div></div>
     </footer>
 </div>
 

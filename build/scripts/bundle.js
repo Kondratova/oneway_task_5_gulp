@@ -66,7 +66,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
     vertical: !0,
     verticalSwiping: !0,
     arrows: !1
-  }), $(".sl_2").slick({
+  }), $(".js_slider_2").slick({
     dots: !0,
     infinite: !0,
     speed: 300,

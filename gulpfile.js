@@ -71,7 +71,7 @@ function buildAssets(cb) {
         .pipe(dest('build/assets/'));
 
     src(['src/assets/img/**/*.*', '!src/assets/img/icons/*.svg'])
-        .pipe(imagemin())
+        // .pipe(imagemin())
         .pipe(dest('build/assets/img/'));
 
     // Раньше функция что-то вовзращала, теперь добавляем вместо этого искусственый колбэк
@@ -81,7 +81,7 @@ function buildAssets(cb) {
 
 function watchFiles() {
     watch(['src/pages/*.twig', 'src/pages/*.html'], buildPages);
-    watch(['src/styles/*.scss', 'src/styles/**/*.css'], buildStyles);
+    watch(['src/styles/**/*.scss', 'src/styles/**/*.css'], buildStyles);
     watch('src/scripts/**/*.js', buildScripts);
     watch('src/assets/**/*.*', buildAssets);
 }

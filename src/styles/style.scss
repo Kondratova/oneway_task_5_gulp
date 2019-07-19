@@ -1,31 +1,34 @@
-//@import "../fonts";
-//@import "../icons";
-
-$screen-sm: 375px;
-$screen-md: 769px;
-$screen-jg: 1000px;
-$screen-xl: 1366px;
+@import "parts/screen";
 
 $font-family-default: 'Roboto', sans-serif;
+$font-size-default: 17px;
 $background-top-block-color: #fff;
 $color-top-text: #000;
 $background-bottom-block-color: #000;
 $color-bottom-text: #fff;
 $height-slider-1: 500px;
 
+//подключение частей scss
+@import "parts/main";
+@import "parts/slider_1";
+@import "parts/popular";
+@import "parts/slider_2";
+@import "parts/footer";
 //сss переменные
 :root {
   --color-link: #256b00;
   --hide-img: 1;
 }
 
-body {
+body, p, h2, h3, input, textarea {
   margin: 0;
   padding: 0;
 }
 
 body {
   font-family: $font-family-default;
+  font-size: $font-size-default;
+
 }
 
 .container {
@@ -43,78 +46,6 @@ body {
   }
 }
 
-.main {
-  background: $background-top-block-color;
-  color: $color-top-text;
-  display: grid;
-  grid-template-columns: minmax(150px, 20%) minmax(500px, 1fr) minmax(100px, 200px);
-}
 
-//////////////////////////////////////////////
-//Слайдер №1
-//////////////////////////////////////////////
 
-.js_slider_1_for {
-  height: $height-slider-1;
-
-  img {
-    //width: 100%;
-    height: $height-slider-1;
-    object-fit: contain;
-    margin: 0 auto;
-  }
-}
-
-.js_slider_1_nav {
-  padding: 15px 15px 0 15px;
-  height: $height-slider-1;
-  //overflow: hidden;
-
-  img {
-    width: 100%;
-    height: 10vw;
-    object-fit: cover;
-    //padding-bottom: 10px ;
-    //margin-bottom: 10px;
-  }
-
-  .slide {
-    margin: 10px;
-  }
-  //Иначе появляется место для кнопок которых нет
-  //выключение кнопок не помогает убрать зарезервированное под них место
-  .slick-list.draggable {
-    padding: 0 !important;
-  }
-}
-
-.slide {
-  //overflow: hidden;
-}
-
-//////////////////////////////////////////////
-//Слайдер №2
-//////////////////////////////////////////////
-
-.sliderPopular {
-  padding: 0 50px;
-
-  img {
-    //width: 100%;
-    height: 20vw;
-    //object-fit: contain;
-  }
-}
-.popular, footer {
-  background: $background-bottom-block-color;
-  color: $color-bottom-text;
-}
-
-//////////////////////////////////////////////
-//Подвал
-//////////////////////////////////////////////
-
-footer {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-}
+@import "magnific/magnific.css";

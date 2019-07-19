@@ -25,7 +25,7 @@ $('.js_slider_1_nav').slick({
 });
 
 //Второй слайдер
-$('.sl_2').slick({
+$('.js_slider_2').slick({
     dots: true,
     infinite: true,
     speed: 300,
