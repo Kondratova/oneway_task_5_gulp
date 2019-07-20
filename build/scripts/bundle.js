@@ -5,20 +5,20 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
 !function (e) {
   var o = {};
 
-  function t(r) {
-    if (o[r]) return o[r].exports;
-    var n = o[r] = {
-      i: r,
+  function t(n) {
+    if (o[n]) return o[n].exports;
+    var r = o[n] = {
+      i: n,
       l: !1,
       exports: {}
     };
-    return e[r].call(n.exports, n, n.exports, t), n.l = !0, n.exports;
+    return e[n].call(r.exports, r, r.exports, t), r.l = !0, r.exports;
   }
 
-  t.m = e, t.c = o, t.d = function (e, o, r) {
+  t.m = e, t.c = o, t.d = function (e, o, n) {
     t.o(e, o) || Object.defineProperty(e, o, {
       enumerable: !0,
-      get: r
+      get: n
     });
   }, t.r = function (e) {
     "undefined" != typeof Symbol && Symbol.toStringTag && Object.defineProperty(e, Symbol.toStringTag, {
@@ -29,16 +29,16 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
   }, t.t = function (e, o) {
     if (1 & o && (e = t(e)), 8 & o) return e;
     if (4 & o && "object" == _typeof(e) && e && e.__esModule) return e;
-    var r = Object.create(null);
-    if (t.r(r), Object.defineProperty(r, "default", {
+    var n = Object.create(null);
+    if (t.r(n), Object.defineProperty(n, "default", {
       enumerable: !0,
       value: e
-    }), 2 & o && "string" != typeof e) for (var n in e) {
-      t.d(r, n, function (o) {
+    }), 2 & o && "string" != typeof e) for (var r in e) {
+      t.d(n, r, function (o) {
         return e[o];
-      }.bind(null, n));
+      }.bind(null, r));
     }
-    return r;
+    return n;
   }, t.n = function (e) {
     var o = e && e.__esModule ? function () {
       return e["default"];
@@ -52,7 +52,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
 }([function (e, o, t) {
   "use strict";
 
-  function r() {
+  function n() {
     $(".js_slider_1_for").slick({
       slidesToShow: 1,
       slidesToScroll: 1,
@@ -79,7 +79,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
     });
   }
 
-  function n() {
+  function r() {
     $(".js_form").on("submit", function (e) {
       e.preventDefault();
       var o = {
@@ -108,19 +108,25 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
   }
 
   function l() {
-    $(document).on("click", ".close", function (e) {
+    null !== localStorage.getItem("mail") && JSON.parse(localStorage.getItem("mail")).forEach(function (e) {
+      $("#js_mail_list").append(" <option value=\"".concat(e, "\" /> "));
+    });
+  }
+
+  function i() {
+    $(document).on("click", ".js_close", function (e) {
       e.preventDefault(), $.magnificPopup.close();
     });
   }
 
   t.r(o), $(document).ready(function () {
-    n(), r(), $(".js_show_specification").magnificPopup({
+    r(), n(), $(".js_show_specification").magnificPopup({
       type: "inline",
       preloader: !1,
       showCloseBtn: !1,
       callbacks: {
         beforeOpen: function beforeOpen() {}
       }
-    }), l(), null === localStorage.getItem("mail") && JSON.parse(localStorage.getItem("mail"));
+    }), i(), l();
   });
 }]);

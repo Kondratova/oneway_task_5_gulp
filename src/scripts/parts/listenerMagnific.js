@@ -1,5 +1,5 @@
 function closeMagnific() {
-    $(document).on('click', '.close', function (e) {
+    $(document).on('click', '.js_close', function (e) {
         e.preventDefault();
         $.magnificPopup.close();
     });
