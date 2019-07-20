@@ -5,54 +5,54 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
 !function (e) {
   var o = {};
 
-  function r(n) {
-    if (o[n]) return o[n].exports;
-    var t = o[n] = {
-      i: n,
+  function t(r) {
+    if (o[r]) return o[r].exports;
+    var n = o[r] = {
+      i: r,
       l: !1,
       exports: {}
     };
-    return e[n].call(t.exports, t, t.exports, r), t.l = !0, t.exports;
+    return e[r].call(n.exports, n, n.exports, t), n.l = !0, n.exports;
   }
 
-  r.m = e, r.c = o, r.d = function (e, o, n) {
-    r.o(e, o) || Object.defineProperty(e, o, {
+  t.m = e, t.c = o, t.d = function (e, o, r) {
+    t.o(e, o) || Object.defineProperty(e, o, {
       enumerable: !0,
-      get: n
+      get: r
     });
-  }, r.r = function (e) {
+  }, t.r = function (e) {
     "undefined" != typeof Symbol && Symbol.toStringTag && Object.defineProperty(e, Symbol.toStringTag, {
       value: "Module"
     }), Object.defineProperty(e, "__esModule", {
       value: !0
     });
-  }, r.t = function (e, o) {
-    if (1 & o && (e = r(e)), 8 & o) return e;
+  }, t.t = function (e, o) {
+    if (1 & o && (e = t(e)), 8 & o) return e;
     if (4 & o && "object" == _typeof(e) && e && e.__esModule) return e;
-    var n = Object.create(null);
-    if (r.r(n), Object.defineProperty(n, "default", {
+    var r = Object.create(null);
+    if (t.r(r), Object.defineProperty(r, "default", {
       enumerable: !0,
       value: e
-    }), 2 & o && "string" != typeof e) for (var t in e) {
-      r.d(n, t, function (o) {
+    }), 2 & o && "string" != typeof e) for (var n in e) {
+      t.d(r, n, function (o) {
         return e[o];
-      }.bind(null, t));
+      }.bind(null, n));
     }
-    return n;
-  }, r.n = function (e) {
+    return r;
+  }, t.n = function (e) {
     var o = e && e.__esModule ? function () {
       return e["default"];
     } : function () {
       return e;
     };
-    return r.d(o, "a", o), o;
-  }, r.o = function (e, o) {
+    return t.d(o, "a", o), o;
+  }, t.o = function (e, o) {
     return Object.prototype.hasOwnProperty.call(e, o);
-  }, r.p = "", r(r.s = 0);
-}([function (e, o, r) {
+  }, t.p = "", t(t.s = 0);
+}([function (e, o, t) {
   "use strict";
 
-  function n() {
+  function r() {
     $(".js_slider_1_for").slick({
       slidesToShow: 1,
       slidesToScroll: 1,
@@ -79,14 +79,26 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
     });
   }
 
-  function t() {
+  function n() {
     $(".js_form").on("submit", function (e) {
       e.preventDefault();
       var o = {
         formData: $(e.target).serializeArray()
       };
       window.API.onFormSubmit(o, function () {
-        console.log("Успешно!"), $(".container_form").css("display", "none"), $(".js_calback_form").css("display", "block");
+        console.log("Успешно!"), $(".container_form").css("display", "none"), $(".js_calback_form").css("display", "block"), function () {
+          var e = $(".js_input_mail").val();
+
+          if (null === localStorage.getItem("mail")) {
+            var _o = JSON.stringify([e]);
+
+            localStorage.setItem("mail", _o);
+          } else {
+            var _o2 = JSON.parse(localStorage.getItem("mail"));
+
+            _o2.push("".concat(e)), localStorage.setItem("mail", JSON.stringify(_o2));
+          }
+        }();
       }, function (e) {
         console.group("Ошибка!"), e.forEach(function (e) {
           console.log("".concat(e.filedName, ": ").concat(e.message));
@@ -95,16 +107,20 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
     });
   }
 
-  r.r(o), $(document).ready(function () {
-    t(), n(), $(".js_show_specification").magnificPopup({
+  function l() {
+    $(document).on("click", ".close", function (e) {
+      e.preventDefault(), $.magnificPopup.close();
+    });
+  }
+
+  t.r(o), $(document).ready(function () {
+    n(), r(), $(".js_show_specification").magnificPopup({
       type: "inline",
       preloader: !1,
       showCloseBtn: !1,
       callbacks: {
         beforeOpen: function beforeOpen() {}
       }
-    }), $(document).on("click", ".close", function (e) {
-      e.preventDefault(), $.magnificPopup.close();
-    });
+    }), l(), null === localStorage.getItem("mail") && JSON.parse(localStorage.getItem("mail"));
   });
 }]);

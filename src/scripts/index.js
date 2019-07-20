@@ -1,16 +1,17 @@
 // Возьмём дебаунс из интернета, отложим в хелперы.
 import initSliders from './parts/sliders';
 import showSpecification from './parts/showSpecification';
-import handleFormSubmi from './parts/handleFormSubmi';
+import handleFormSubmit from './parts/handleFormSubmit';
+import listenerForm from './parts/listenerForm'
+import listenerMagnific from './parts/listenerMagnific'
+
 
 $(document).ready(() => {
-    handleFormSubmi();
+    handleFormSubmit();
     initSliders();
     showSpecification();
-
-    $(document).on('click', '.close', function (e) {
-        e.preventDefault();
-        $.magnificPopup.close();
-    });
+    listenerMagnific()
+    listenerForm ();
 });
 
+// localStorage.clear()
