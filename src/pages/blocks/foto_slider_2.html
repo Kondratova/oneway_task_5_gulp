@@ -4,9 +4,9 @@
     <img src="{{painting.src}}" alt="">
     <div class="sl_text">
         <p class="sl_head"><span class="name">{{painting.name}}</span>, <time datetime="{{painting.year}}">{{painting.year}}</time></p>
-        <p> <span class="size">{{painting.width}}х {{painting.height}}</span> , <span class="basis">{{painting.basis}}</span></p>
         <p class="author">{{painting.author}}</p>
-        <p class="prise">{{painting.prise}}₽</p>
+        <p><span class="size">{{painting.width}}х {{painting.height}}</span> , <span class="basis">{{painting.basis}}</span><span class="prise">{{painting.prise}}₽</span></p>
+
     </div>
 </div>
 {% endfor %}
