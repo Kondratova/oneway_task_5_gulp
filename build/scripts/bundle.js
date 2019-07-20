@@ -7,12 +7,12 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
 
   function t(n) {
     if (o[n]) return o[n].exports;
-    var r = o[n] = {
+    var l = o[n] = {
       i: n,
       l: !1,
       exports: {}
     };
-    return e[n].call(r.exports, r, r.exports, t), r.l = !0, r.exports;
+    return e[n].call(l.exports, l, l.exports, t), l.l = !0, l.exports;
   }
 
   t.m = e, t.c = o, t.d = function (e, o, n) {
@@ -33,10 +33,10 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
     if (t.r(n), Object.defineProperty(n, "default", {
       enumerable: !0,
       value: e
-    }), 2 & o && "string" != typeof e) for (var r in e) {
-      t.d(n, r, function (o) {
+    }), 2 & o && "string" != typeof e) for (var l in e) {
+      t.d(n, l, function (o) {
         return e[o];
-      }.bind(null, r));
+      }.bind(null, l));
     }
     return n;
   }, t.n = function (e) {
@@ -79,14 +79,14 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
     });
   }
 
-  function r() {
+  function l() {
     $(".js_form").on("submit", function (e) {
       e.preventDefault();
       var o = {
         formData: $(e.target).serializeArray()
       };
       window.API.onFormSubmit(o, function () {
-        console.log("Успешно!"), $(".container_form").css("display", "none"), $(".js_calback_form").css("display", "block"), function () {
+        console.log("Успешно!"), $(".container_form").css("display", "none"), $(".js_massage_valid_mail p").remove(), $(".js_calback_form").css("display", "block"), function () {
           var e = $(".js_input_mail").val();
 
           if (null === localStorage.getItem("mail")) {
@@ -96,7 +96,9 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
           } else {
             var _o2 = JSON.parse(localStorage.getItem("mail"));
 
-            _o2.push("".concat(e)), localStorage.setItem("mail", JSON.stringify(_o2));
+            _o2.some(function (o) {
+              return o === e;
+            }) || (_o2.push("".concat(e)), localStorage.setItem("mail", JSON.stringify(_o2)));
           }
         }();
       }, function (e) {
@@ -107,26 +109,41 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
     });
   }
 
-  function l() {
-    null !== localStorage.getItem("mail") && JSON.parse(localStorage.getItem("mail")).forEach(function (e) {
-      $("#js_mail_list").append(" <option value=\"".concat(e, "\" /> "));
+  function i() {
+    $(".js_massage_valid_mail p").remove();
+  }
+
+  function a(e) {
+    $(".button").prop("disabled", e);
+  }
+
+  function r() {
+    $(".js_input_mail").on("change", function () {
+      var e = $(".js_input_mail").val();
+      !1 === /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(e) ? (i(), $(".js_massage_valid_mail").append("<p>Введите корректный e-mail</p>"), a(!0)) : (i(), $(".js_massage_valid_mail").append("<p>E-mail верный</p>"), a(!1));
     });
   }
 
-  function i() {
+  function s() {
+    null !== localStorage.getItem("mail") && JSON.parse(localStorage.getItem("mail")).forEach(function (e) {
+      $("#js_mail_list").append(" <option value=\"".concat(e, "\" /> "));
+    }), r();
+  }
+
+  function c() {
     $(document).on("click", ".js_close", function (e) {
       e.preventDefault(), $.magnificPopup.close();
     });
   }
 
   t.r(o), $(document).ready(function () {
-    r(), n(), $(".js_show_specification").magnificPopup({
+    l(), n(), $(".js_show_specification").magnificPopup({
       type: "inline",
       preloader: !1,
       showCloseBtn: !1,
       callbacks: {
         beforeOpen: function beforeOpen() {}
       }
-    }), i(), l();
+    }), c(), s();
   });
 }]);

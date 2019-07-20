@@ -27,7 +27,7 @@
     "gulp-sass": "^4.0.2",
     "gulp-twig": "^1.2.0",
     "imagemin-jpegtran": "^6.0.0",
-    "svgo": "^1.2.2"
+    "svgo": "^1.2.2",
+    "validate.js": "^0.13.1"
   }
-
 }

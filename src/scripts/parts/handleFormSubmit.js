@@ -1,6 +1,7 @@
 //Скрываем форму
 function hideForm() {
     $('.container_form').css("display", "none");
+    $('.js_massage_valid_mail p').remove();
 }
 
 //На месте формы высвечиваем сообщение об успехе
@@ -18,11 +19,17 @@ function rememberMail() {
         let serialArr = JSON.stringify([mailVal]);
 
         localStorage.setItem('mail', serialArr);
-    } else  {
+    } else {
         let returnArr = JSON.parse(localStorage.getItem("mail"));
 
-        returnArr.push(`${mailVal}`);
-        localStorage.setItem('mail', JSON.stringify(returnArr));
+        let repeat = returnArr.some((element) => {
+            return element === mailVal
+        });
+
+        if (!repeat) {
+            returnArr.push(`${mailVal}`);
+            localStorage.setItem('mail', JSON.stringify(returnArr));
+        }
     }
 }
 
