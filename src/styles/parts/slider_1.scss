@@ -6,13 +6,14 @@
   height: $height-slider-1;
 
   img {
-    //width: 100%;
+    width: 100%;
     height: $height-slider-1;
     object-fit: contain;
     margin: 0 auto;
   }
   .slide {
     position: relative;
+    height: $height-slider-1;
   }
 
   .sl_text {
@@ -30,7 +31,7 @@
 
 .js_slider_1_nav {
   padding: 15px 15px 0 15px;
-  height: $height-slider-1;
+  //height: $height-slider-1;
 
   img {
     width: 100%;
