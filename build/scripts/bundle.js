@@ -79,20 +79,24 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
     });
   }
 
-  r.r(o), $(document).ready(function () {
+  function t() {
     $(".js_form").on("submit", function (e) {
       e.preventDefault();
       var o = {
         formData: $(e.target).serializeArray()
       };
       window.API.onFormSubmit(o, function () {
-        console.log("Успешно!");
+        console.log("Успешно!"), $(".container_form").css("display", "none"), $(".js_calback_form").css("display", "block");
       }, function (e) {
         console.group("Ошибка!"), e.forEach(function (e) {
           console.log("".concat(e.filedName, ": ").concat(e.message));
         }), console.groupEnd();
       });
-    }), n(), $(".js_show_specification").magnificPopup({
+    });
+  }
+
+  r.r(o), $(document).ready(function () {
+    t(), n(), $(".js_show_specification").magnificPopup({
       type: "inline",
       preloader: !1,
       callbacks: {

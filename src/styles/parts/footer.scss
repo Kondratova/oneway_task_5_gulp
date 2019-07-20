@@ -9,6 +9,10 @@ footer {
   grid-template-columns: 1fr minmax(300px, 35vw) minmax(300px, 35vw) 1fr;
   padding-bottom: 50px;
 
+  >div {
+   height: 330px;
+  }
+
   h2 {
     font-size: 2em;
   }
@@ -46,6 +50,7 @@ footer {
 
   form {
     box-sizing: border-box;
+    opacity: 1;
   }
 
   input {
@@ -75,5 +80,12 @@ footer {
     float: right;
     background: blue;
     color: white;
+  }
+
+  .js_calback_form {
+    display: none;
+    color: green;
+    box-sizing: border-box;
+    padding: 5vw ;
   }
 }

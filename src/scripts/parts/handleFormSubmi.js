@@ -1,4 +1,9 @@
 
+function showMassageSuccess() {
+    $('.container_form').css("display", "none");
+    $('.js_calback_form').css("display", "block");
+}
+
 export default function handleFormSubmi() {
     $('.js_form').on('submit', e => {
         e.preventDefault();
@@ -12,6 +17,7 @@ export default function handleFormSubmi() {
 
         const  callbackSuccess = () => {
             console.log('Успешно!');
+            showMassageSuccess()
         };
 
         const callbackError = errors => {
