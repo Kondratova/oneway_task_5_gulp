@@ -56,7 +56,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
     $(".js_slider_1_for").slick({
       slidesToShow: 1,
       slidesToScroll: 1,
-      arrows: !1,
+      arrows: !0,
       fade: !0,
       asNavFor: ".js_slider_1_nav"
     }), $(".js_slider_1_nav").slick({
@@ -99,9 +99,12 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
     t(), n(), $(".js_show_specification").magnificPopup({
       type: "inline",
       preloader: !1,
+      showCloseBtn: !1,
       callbacks: {
         beforeOpen: function beforeOpen() {}
       }
+    }), $(document).on("click", ".close", function (e) {
+      e.preventDefault(), $.magnificPopup.close();
     });
   });
 }]);

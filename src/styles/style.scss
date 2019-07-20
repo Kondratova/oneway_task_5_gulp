@@ -9,6 +9,7 @@ $color-bottom-text: #fff;
 $height-slider-1: 500px;
 
 //подключение частей scss
+@import "parts/fonts";
 @import "parts/main";
 @import "parts/slider_1";
 @import "parts/popular";
@@ -24,6 +25,11 @@ body, p, h2, h3, input, textarea {
   margin: 0;
   padding: 0;
 }
+/* Remove outline on the forms and links */
+:active, :hover, :focus {
+  outline: 0;
+  outline-offset: 0;
+}
 
 body {
   font-family: $font-family-default;
@@ -38,7 +44,7 @@ body {
   grid-template-columns: minmax(800px, 1fr);
 
   div, footer {
-    outline: red solid 1px;
+    //outline: red solid 1px;
   }
 
   > div {
@@ -52,4 +58,18 @@ body {
   background: white;
   padding: 15px;
   margin: 0 auto;
+  position: relative;
+
+  .close {
+    color: red;
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 5px;
+
+    &:before{
+      font-weight: 900;
+      font-width: 125;
+    }
+  }
 }

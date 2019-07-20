@@ -7,4 +7,10 @@ $(document).ready(() => {
     handleFormSubmi();
     initSliders();
     showSpecification();
+
+    $(document).on('click', '.close', function (e) {
+        e.preventDefault();
+        $.magnificPopup.close();
+    });
 });
+

@@ -4,7 +4,7 @@ function initSlider1() {
     $('.js_slider_1_for').slick({
         slidesToShow: 1,
         slidesToScroll: 1,
-        arrows: false,
+        arrows: true,
         fade: true,
         asNavFor: '.js_slider_1_nav'
     });
