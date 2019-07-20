@@ -6,8 +6,12 @@
   padding: 0 50px;
 
   img {
-    //width: 100%;
+    width: auto;
+    object-fit: contain;
     height: 20vw;
-    //object-fit: contain;
+  }
+
+  .slide {
+    margin: 20px;
   }
 }

@@ -1,0 +1,23 @@
+<div class="js_slider_1_for">
+    {% for painting in paintings %}
+    <div class="slide">
+        <img src="{{painting.src}}" alt="">
+        <div class="sl_text">
+            <p class="sl_head"><span class="name">{{painting.name}}</span>, <time datetime="{{painting.year}}">{{painting.year}}</time></p>
+            <p> <span class="size">{{painting.width}}х {{painting.height}}</span> , <span class="basis">{{painting.basis}}</span></p>
+            <p class="author">{{painting.author}}</p>
+            <p class="prise">{{painting.prise}}₽</p>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+
+<div class="js_slider_1_nav">
+    {% for painting in paintings %}
+    <div class="slide">
+        {% if painting.src %}
+            <img src="{{painting.src}}" alt="">
+        {% endif %}
+    </div>
+    {% endfor %}
+</div>

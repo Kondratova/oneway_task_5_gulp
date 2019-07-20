@@ -1,3 +1,13 @@
 {% for i in 1..3 %}
-<div class="slide"><img src="assets/img/{{i}}.jpg" alt=""></div>
+{% for painting in paintings %}
+<div class="slide">
+    <img src="{{painting.src}}" alt="">
+    <div class="sl_text">
+        <p class="sl_head"><span class="name">{{painting.name}}</span>, <time datetime="{{painting.year}}">{{painting.year}}</time></p>
+        <p> <span class="size">{{painting.width}}х {{painting.height}}</span> , <span class="basis">{{painting.basis}}</span></p>
+        <p class="author">{{painting.author}}</p>
+        <p class="prise">{{painting.prise}}₽</p>
+    </div>
+</div>
+{% endfor %}
 {% endfor %}

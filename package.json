@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack"
   },
   "author": "",
   "license": "ISC",
@@ -28,4 +29,5 @@
     "imagemin-jpegtran": "^6.0.0",
     "svgo": "^1.2.2"
   }
+
 }

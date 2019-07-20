@@ -60,10 +60,13 @@ function buildScripts(cb) {
         .pipe(dest('build/scripts/'));
 
     src(['src/scripts/slick/*.js',
-        'src/scripts/magnific/*.js',
-        'src/scripts/api/*.js'])
+        'src/scripts/magnific/*.js'])
         .pipe(babel({ presets: ['@babel/env'] }))
         .pipe(dest('build/scripts/'));
+
+    src('src/scripts/api/*.js')
+        .pipe(dest('build/scripts/'));
+
     cb();
 }
 
@@ -82,7 +85,7 @@ function buildAssets(cb) {
 }
 
 function watchFiles() {
-    watch(['src/pages/*.twig', 'src/pages/*.html'], buildPages);
+    watch(['src/pages/*.twig', 'src/pages/**/*.html'], buildPages);
     watch(['src/styles/**/*.scss', 'src/styles/**/*.css'], buildStyles);
     watch('src/scripts/**/*.js', buildScripts);
     watch('src/assets/**/*.*', buildAssets);
