@@ -12,8 +12,6 @@ $(document).ready(() => {
     showSpecification();
     listenerMagnific()
     listenerForm ();
-
-
 });
 
 // localStorage.clear()
