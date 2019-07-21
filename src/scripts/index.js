@@ -6,7 +6,7 @@ import listenerForm from './parts/listenerForm'
 import listenerMagnific from './parts/listenerMagnific'
 
 
-$(document).ready(() => {
+$(() => {
     handleFormSubmit();
     initSliders();
     showSpecification();

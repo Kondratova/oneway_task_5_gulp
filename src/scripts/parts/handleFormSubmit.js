@@ -27,7 +27,7 @@ function rememberMail() {
         });
 
         if (!repeat) {
-            returnArr.push(`${mailVal}`);
+            returnArr.push('mailVal');
             localStorage.setItem('mail', JSON.stringify(returnArr));
         }
     }

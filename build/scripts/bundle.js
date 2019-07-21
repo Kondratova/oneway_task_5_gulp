@@ -98,7 +98,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
 
             _o2.some(function (o) {
               return o === e;
-            }) || (_o2.push("".concat(e)), localStorage.setItem("mail", JSON.stringify(_o2)));
+            }) || (_o2.push("mailVal"), localStorage.setItem("mail", JSON.stringify(_o2)));
           }
         }();
       }, function (e) {
@@ -136,7 +136,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
     });
   }
 
-  t.r(o), $(document).ready(function () {
+  t.r(o), $(function () {
     l(), n(), $(".js_show_specification").magnificPopup({
       type: "inline",
       preloader: !1,

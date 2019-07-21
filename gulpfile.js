@@ -59,8 +59,7 @@ function buildScripts(cb) {
         .pipe(babel({ presets: ['@babel/env'] }))
         .pipe(dest('build/scripts/'));
 
-    src(['src/scripts/slick/*.js',
-        'src/scripts/magnific/*.js'])
+    src('src/scripts/plagins/*.js')
         .pipe(babel({ presets: ['@babel/env'] }))
         .pipe(dest('build/scripts/'));
 
