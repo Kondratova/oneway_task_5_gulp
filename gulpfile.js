@@ -11,6 +11,7 @@ const twig = require('gulp-twig');
 const typograf = require('gulp-typograf');
 const babel = require('gulp-babel');
 const webpack = require('webpack-stream');
+const webp = require('gulp-webp');
 
 // Девсервер
 function devServer(cb) {
@@ -75,7 +76,8 @@ function buildAssets(cb) {
         .pipe(dest('build/assets/'));
 
     src(['src/assets/img/**/*.*', '!src/assets/img/icons/*.svg'])
-        // .pipe(imagemin())
+        .pipe(webp())
+        .pipe(imagemin())
         .pipe(dest('build/assets/img/'));
 
     // Раньше функция что-то вовзращала, теперь добавляем вместо этого искусственый колбэк

@@ -5,59 +5,60 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
 !function (e) {
   var o = {};
 
-  function t(n) {
-    if (o[n]) return o[n].exports;
-    var l = o[n] = {
-      i: n,
+  function n(t) {
+    if (o[t]) return o[t].exports;
+    var l = o[t] = {
+      i: t,
       l: !1,
       exports: {}
     };
-    return e[n].call(l.exports, l, l.exports, t), l.l = !0, l.exports;
+    return e[t].call(l.exports, l, l.exports, n), l.l = !0, l.exports;
   }
 
-  t.m = e, t.c = o, t.d = function (e, o, n) {
-    t.o(e, o) || Object.defineProperty(e, o, {
+  n.m = e, n.c = o, n.d = function (e, o, t) {
+    n.o(e, o) || Object.defineProperty(e, o, {
       enumerable: !0,
-      get: n
+      get: t
     });
-  }, t.r = function (e) {
+  }, n.r = function (e) {
     "undefined" != typeof Symbol && Symbol.toStringTag && Object.defineProperty(e, Symbol.toStringTag, {
       value: "Module"
     }), Object.defineProperty(e, "__esModule", {
       value: !0
     });
-  }, t.t = function (e, o) {
-    if (1 & o && (e = t(e)), 8 & o) return e;
+  }, n.t = function (e, o) {
+    if (1 & o && (e = n(e)), 8 & o) return e;
     if (4 & o && "object" == _typeof(e) && e && e.__esModule) return e;
-    var n = Object.create(null);
-    if (t.r(n), Object.defineProperty(n, "default", {
+    var t = Object.create(null);
+    if (n.r(t), Object.defineProperty(t, "default", {
       enumerable: !0,
       value: e
     }), 2 & o && "string" != typeof e) for (var l in e) {
-      t.d(n, l, function (o) {
+      n.d(t, l, function (o) {
         return e[o];
       }.bind(null, l));
     }
-    return n;
-  }, t.n = function (e) {
+    return t;
+  }, n.n = function (e) {
     var o = e && e.__esModule ? function () {
       return e["default"];
     } : function () {
       return e;
     };
-    return t.d(o, "a", o), o;
-  }, t.o = function (e, o) {
+    return n.d(o, "a", o), o;
+  }, n.o = function (e, o) {
     return Object.prototype.hasOwnProperty.call(e, o);
-  }, t.p = "", t(t.s = 0);
-}([function (e, o, t) {
+  }, n.p = "", n(n.s = 0);
+}([function (e, o, n) {
   "use strict";
 
-  function n() {
+  function t() {
     $(".js_slider_1_for").slick({
       slidesToShow: 1,
       slidesToScroll: 1,
       arrows: !0,
       fade: !0,
+      lazyLoad: "ondemand",
       asNavFor: ".js_slider_1_nav"
     }), $(".js_slider_1_nav").slick({
       slidesToShow: 3,
@@ -68,6 +69,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
       focusOnSelect: !0,
       vertical: !0,
       verticalSwiping: !0,
+      lazyLoad: "ondemand",
       arrows: !1
     }), $(".js_slider_2").slick({
       dots: !0,
@@ -75,6 +77,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
       speed: 300,
       slidesToShow: 1,
       centerMode: !0,
+      lazyLoad: "ondemand",
       variableWidth: !0
     });
   }
@@ -109,18 +112,18 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
     });
   }
 
-  function i() {
+  function a() {
     $(".js_massage_valid_mail p").remove();
   }
 
-  function a(e) {
+  function i(e) {
     $(".button").prop("disabled", e);
   }
 
   function r() {
     $(".js_input_mail").on("change", function () {
       var e = $(".js_input_mail").val();
-      !1 === /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(e) ? (i(), $(".js_massage_valid_mail").append("<p>Введите корректный e-mail</p>"), a(!0)) : (i(), $(".js_massage_valid_mail").append("<p>E-mail верный</p>"), a(!1));
+      !1 === /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(e) ? (a(), $(".js_massage_valid_mail").append("<p>Введите корректный e-mail</p>"), i(!0)) : (a(), $(".js_massage_valid_mail").append("<p>E-mail верный</p>"), i(!1));
     });
   }
 
@@ -136,8 +139,8 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
     });
   }
 
-  t.r(o), $(function () {
-    l(), n(), $(".js_show_specification").magnificPopup({
+  n.r(o), $(function () {
+    l(), t(), $(".js_show_specification").magnificPopup({
       type: "inline",
       preloader: !1,
       showCloseBtn: !1,

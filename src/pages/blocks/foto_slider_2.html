@@ -1,7 +1,7 @@
 {% for i in 1..3 %}
 {% for painting in paintings %}
 <div class="slide" itemtype = "https://schema.org/CreativeWork">
-    <img src="{{painting.src}}" alt="" itemprop = "image" >
+    <img data-lazy="{{painting.src}}" alt="" itemprop = "image" >
     <div class="sl_text">
         <p class="sl_head"><span class="name" itemprop="name">{{painting.name}}</span>, <time datetime="{{painting.year}}" itemprop = "dateCreated">{{painting.year}}</time></p>
         <p class="author"  itemprop="author">{{painting.author}}</p>

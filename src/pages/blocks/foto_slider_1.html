@@ -1,7 +1,7 @@
 <div class="js_slider_1_for" itemtype = "https://schema.org/CreativeWork">
     {% for painting in paintings %}
     <div class="slide">
-        <img src="{{painting.src}}" alt="{{painting.name}}" itemprop = "image" >
+        <img data-lazy="{{painting.src}}" alt="{{painting.name}}" itemprop = "image" >
         <div class="sl_text">
             <p class="sl_head"><span class="name" itemprop="name">{{painting.name}}</span>, <time datetime="{{painting.year}}" itemprop = "dateCreated">{{painting.year}}</time></p>
             <p> <span class="size" itemtype = "https://schema.org/ImageObject"><span itemprop="width"></span>{{painting.width}}х <span itemprop="height">{{painting.height}}</span></span> , <span class="basis" itemprop="material">{{painting.basis}}</span></p>
@@ -16,7 +16,7 @@
     {% for painting in paintings %}
     <div class="slide">
         {% if painting.src %}
-            <img src="{{painting.src}}" alt="">
+            <img data-lazy="{{painting.src}}" alt="">
         {% endif %}
     </div>
     {% endfor %}

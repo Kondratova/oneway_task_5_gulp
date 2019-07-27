@@ -6,6 +6,7 @@ function initSlider1() {
         slidesToScroll: 1,
         arrows: true,
         fade: true,
+        lazyLoad: 'ondemand',
         asNavFor: '.js_slider_1_nav'
     });
 
@@ -19,6 +20,7 @@ function initSlider1() {
         focusOnSelect: true,
         vertical: true,
         verticalSwiping: true,
+        lazyLoad: 'ondemand',
         arrows: false
 
     });
@@ -32,6 +34,7 @@ function initSlider2() {
         speed: 300,
         slidesToShow: 1,
         centerMode: true,
+        lazyLoad: 'ondemand',
         variableWidth: true
     });
 }
