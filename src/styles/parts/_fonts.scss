@@ -1,19 +1,5 @@
+//Свой шрифт
+
 @font-face {
-  font-family: 'my_icon_font';
-  src: url('../assets/fonts/my_icon_font.woff2?94069686') format('woff2'),
-  url('../assets/fonts/my_icon_font.woff?94069686') format('woff');
-  font-weight: normal;
-  font-style: normal;
-}
 
-[class^="i-"]:before, [class*=" i-"]:before {
-  font-family: "my_icon_font";
-  font-style: normal;
-  font-weight: normal;
-  speak: none;
-  display: inline-block;
 }
-
-.i-left:before { content: '\3c'; }
-.i-right:before { content: '\3e'; }
-.i-close:before { content: '\78'; }

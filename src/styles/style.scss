@@ -1,27 +1,27 @@
 @import "parts/screen";
-
-$font-family-default: 'Roboto', sans-serif;
+$font-family-default: 'PT Sans', sans-serif;
 $font-size-default: 17px;
+$width-content: 1136px;
+
 $background-top-block-color: #fff;
 $color-top-text: #000;
 $background-bottom-block-color: #000;
 $color-bottom-text: #fff;
 $height-slider-1: 500px;
 
-//подключение частей scss
-@import "parts/fonts";
-@import "parts/main";
-@import "parts/slider_1";
-@import "parts/popular";
-@import "parts/slider_2";
-@import "parts/footer";
 //сss переменные
 :root {
   --color-link: #256b00;
   --hide-img: 1;
 }
 
-body, p, h2, h3, input, textarea {
+//подключение частей scss
+@import "parts/fonts";
+@import "parts/main";
+@import "parts/footer";
+
+
+body, p {
   margin: 0;
   padding: 0;
 }
@@ -38,38 +38,27 @@ body {
 }
 
 .container {
-  box-sizing: border-box;
-  display: grid;
-  grid-gap: 0;
-  grid-template-columns: minmax(800px, 1fr);
 
-  div, footer {
-    //outline: red solid 1px;
+  display: grid;
+  grid-template-columns: 1fr;
+
+  >* {
+    border: black solid 1px;
   }
 
-  > div {
-    padding: 20px;
+  @media screen and (max-width: $screen-jg) {
+    width: 100%;
+  }
+
+  @media screen and (min-width: $screen-jg) {
+    width: $width-content;
+    margin: 0 auto;
   }
 }
 
-.specification {
-  width: 60vw;
-  height: 90vh;
-  background: white;
-  padding: 15px;
-  margin: 0 auto;
-  position: relative;
+.slider_container {
+  img {
+    width: 100%;
 
-  .js_close {
-    color: red;
-    position: absolute;
-    right: 0;
-    top: 0;
-    padding: 5px;
-
-    &:before{
-      font-weight: 900;
-      font-width: 125;
-    }
   }
 }
