@@ -1,0 +1,19 @@
+{% set fullMenu = [{
+section: 'Фетч',
+subsection: ['Магазин', 'Блог', 'Доставка и оплата'],
+email: "shop@fetch.ru",
+phone: "8 800 912-11-42",
+text: "Звонок бесплатный",
+}] %}
+
+{% for item in fullMenu %}
+<div class="info">
+    <p class="section"><a href="">{{ item.section }}</a></p>
+    {% for subitem in item.subsection %}
+    <p class="subsection"><a href="">{{ subitem }}</a></p>
+    {% endfor %}
+    <p class="subsection"><a href="">{{ item.email }}</a></p>
+    <p class="subsection"><a href="">{{ item.phone }}</a></p>
+    <p class="subsection"><a href="">{{ item.text }}</a></p>
+</div>
+{% endfor %}

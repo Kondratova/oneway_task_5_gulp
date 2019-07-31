@@ -1,6 +1,7 @@
 @import "parts/screen";
 $font-family-default: 'PT Sans', sans-serif;
 $font-size-default: 16px;
+$line-height-default: 21px;
 $color-default: #000;
 $width-content: 1136px;
 $font-size-logo: 24px;
@@ -22,8 +23,9 @@ $color-main-links: #4541FE;
 @import "parts/footer";
 @import "parts/header";
 @import "parts/sliders";
+@import "parts/content";
 
-body, p {
+body, p, h2 {
   margin: 0;
   padding: 0;
 }
@@ -36,6 +38,7 @@ body, p {
 body {
   font-family: $font-family-default;
   font-size: $font-size-default;
+  line-height: $line-height-default;
 
 }
 

@@ -1,0 +1,20 @@
+{% set content =[
+{id: '1', title: 'Лукбук, лето 2019', subtitle: 'Стильные образы для тёплых деньков', src: ['assets/img/item1.webp']},
+{id: '2', title: 'Выбор редакции: часы', subtitle: 'ТОП-5 лучших предложений по версии администрации Фетч', src: ['']},
+{id: '3', title: 'Новая коллекция adidas Originals', subtitle: 'Десять крутейших кроссовок', src: ['assets/img/item3.png']},
+{id: '4', title: 'Предзаказ: Maison Margiela Fusion', subtitle: 'От 92 000 ₽', src: ['assets/img/item4_1.png', 'assets/img/item4_2.png', 'assets/img/item4_3.png']},
+] %}
+
+{% for item in content %}
+<div class="item{{ item.id }}">
+    <h2><a href="">{{ item.title }}</a></h2>
+    <p>{{ item.subtitle }}</p>
+    {% if item.src %}
+    <div class="wrapper_img">
+        {% for src in item.src %}
+        <img src="{{ src }}" alt="">
+        {% endfor %}
+    </div>
+    {% endif %}
+</div>
+{% endfor %}

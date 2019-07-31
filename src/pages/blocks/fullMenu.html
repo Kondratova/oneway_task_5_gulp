@@ -1,0 +1,16 @@
+{% set fullMenu = [
+{section: 'Для мужчин', subsection: ['Верхняя одежда', 'Рубашки и поло', 'Трикотаж', 'Брюки и джинсы', 'Бельё и носки']},
+{section: 'Для женщин', subsection: ['Верхняя одежда', 'Рубашки и поло', 'Трикотаж', 'Платья и юбки', 'Бельё и носки']},
+{section: 'Обувь', subsection: ['Кроссовки и кеды', 'Ботинки']},
+{section: 'Аксессуары', subsection: ['Сумки и рюкзаки', 'Часы', 'Бижутерия', 'Средства для ухода']},
+{section: 'Скидки', subsection: ['Летняя распродажа', 'Коллекция 2018']},
+] %}
+
+{% for item in fullMenu %}
+<div>
+    <p class="section"><a href="">{{ item.section }}</a></p>
+    {% for subitem in item.subsection %}
+    <p class="subsection"><a href="">{{ subitem }}</a></p>
+    {% endfor %}
+</div>
+{% endfor %}

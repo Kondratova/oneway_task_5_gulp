@@ -75,15 +75,14 @@ function buildAssets(cb) {
     src(['src/assets/**/*.*', '!src/assets/img/**/*.*'])
         .pipe(dest('build/assets/'));
 
-    src(['src/assets/img/**/*.*', '!src/assets/img/icons/*.svg', '!src/assets/img/nav/*.*'])
+    src(['src/assets/img/**/*.*', '!src/assets/img/icons/*.svg', '!src/assets/img/png/*.*'])
         .pipe(webp())
         .pipe(imagemin())
         .pipe(dest('build/assets/img/'));
 
-    src('src/assets/img/nav/*.*')
-        .pipe(webp())
+    src('src/assets/img/png/*.*')
         .pipe(imagemin())
-        .pipe(dest('build/assets/img/nav/'));
+        .pipe(dest('build/assets/img/'));
     // Раньше функция что-то вовзращала, теперь добавляем вместо этого искусственый колбэк
     // Это нужно, чтобы Галп понимал, когда функция отработала и мог запустить следующие задачи
     cb();

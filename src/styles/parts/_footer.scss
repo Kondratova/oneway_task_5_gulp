@@ -3,6 +3,31 @@
 //////////////////////////////////////////////
 
 footer {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(6, max-content);
+  grid-gap: 32px;
 
+  a {
+    color: $color-main-links;
+  }
+
+  .section {
+    font-weight: bold;
+    margin-bottom: 12px;
+    margin-top: 1px;
+  }
+
+  .subsection {
+    margin-left: 9px;
+    margin-bottom: 8px;
+  }
+
+  &:before {
+    content: "aaaa";
+    background: black;
+    position: absolute;
+    width: 100vw;
+    left: 0;
+  }
 }
-
