@@ -1,0 +1,58 @@
+.js_slider_main {
+  outline: red solid 1px;
+  //overflow: hidden;
+  .slide {
+    height: 600px;
+    position: relative;
+    width: 100%;
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    overflow: hidden;
+    z-index: -1;
+  }
+
+  .slide_text {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    font-weight: bold;
+    margin-bottom: 72px;
+
+    a {
+      color: $color-default;
+      width: $width-slider-text;
+      font-weight: 900;
+      word-spacing: 0;
+    }
+
+    @media screen and (max-width: $screen-jg){
+      font-size: $font-size-slide_text_sm;
+
+      a {
+        line-height: 62px;
+      }
+    }
+
+    @media screen and (min-width: $screen-jg){
+      font-size: $font-size-slide_text_jg;
+
+      a {
+        line-height: 83px;
+      }
+    }
+  }
+
+  .slick-prev
+  {
+    left: 15px;
+  }
+
+  .slick-next
+  {
+    right: 15px;
+  }
+}

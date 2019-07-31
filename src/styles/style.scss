@@ -1,13 +1,14 @@
 @import "parts/screen";
 $font-family-default: 'PT Sans', sans-serif;
-$font-size-default: 17px;
+$font-size-default: 16px;
+$color-default: #000;
 $width-content: 1136px;
+$font-size-logo: 24px;
+$font-size-slide_text_sm: 48px;
+$font-size-slide_text_jg: 64px;
+$width-slider-text: 600px;
+$color-main-links: #4541FE;
 
-$background-top-block-color: #fff;
-$color-top-text: #000;
-$background-bottom-block-color: #000;
-$color-bottom-text: #fff;
-$height-slider-1: 500px;
 
 //сss переменные
 :root {
@@ -19,7 +20,8 @@ $height-slider-1: 500px;
 @import "parts/fonts";
 @import "parts/main";
 @import "parts/footer";
-
+@import "parts/header";
+@import "parts/sliders";
 
 body, p {
   margin: 0;
@@ -41,9 +43,9 @@ body {
 
   display: grid;
   grid-template-columns: 1fr;
-
+  position: relative;
   >* {
-    border: black solid 1px;
+    outline: red solid 1px;
   }
 
   @media screen and (max-width: $screen-jg) {
@@ -56,9 +58,3 @@ body {
   }
 }
 
-.slider_container {
-  img {
-    width: 100%;
-
-  }
-}

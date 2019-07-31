@@ -3,52 +3,65 @@
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 !function (e) {
-  var t = {};
+  var r = {};
 
-  function r(n) {
-    if (t[n]) return t[n].exports;
-    var o = t[n] = {
+  function t(n) {
+    if (r[n]) return r[n].exports;
+    var o = r[n] = {
       i: n,
       l: !1,
       exports: {}
     };
-    return e[n].call(o.exports, o, o.exports, r), o.l = !0, o.exports;
+    return e[n].call(o.exports, o, o.exports, t), o.l = !0, o.exports;
   }
 
-  r.m = e, r.c = t, r.d = function (e, t, n) {
-    r.o(e, t) || Object.defineProperty(e, t, {
+  t.m = e, t.c = r, t.d = function (e, r, n) {
+    t.o(e, r) || Object.defineProperty(e, r, {
       enumerable: !0,
       get: n
     });
-  }, r.r = function (e) {
+  }, t.r = function (e) {
     "undefined" != typeof Symbol && Symbol.toStringTag && Object.defineProperty(e, Symbol.toStringTag, {
       value: "Module"
     }), Object.defineProperty(e, "__esModule", {
       value: !0
     });
-  }, r.t = function (e, t) {
-    if (1 & t && (e = r(e)), 8 & t) return e;
-    if (4 & t && "object" == _typeof(e) && e && e.__esModule) return e;
+  }, t.t = function (e, r) {
+    if (1 & r && (e = t(e)), 8 & r) return e;
+    if (4 & r && "object" == _typeof(e) && e && e.__esModule) return e;
     var n = Object.create(null);
-    if (r.r(n), Object.defineProperty(n, "default", {
+    if (t.r(n), Object.defineProperty(n, "default", {
       enumerable: !0,
       value: e
-    }), 2 & t && "string" != typeof e) for (var o in e) {
-      r.d(n, o, function (t) {
-        return e[t];
+    }), 2 & r && "string" != typeof e) for (var o in e) {
+      t.d(n, o, function (r) {
+        return e[r];
       }.bind(null, o));
     }
     return n;
-  }, r.n = function (e) {
-    var t = e && e.__esModule ? function () {
+  }, t.n = function (e) {
+    var r = e && e.__esModule ? function () {
       return e["default"];
     } : function () {
       return e;
     };
-    return r.d(t, "a", t), t;
-  }, r.o = function (e, t) {
-    return Object.prototype.hasOwnProperty.call(e, t);
-  }, r.p = "", r(r.s = 0);
-}([function (e, t) {
-  $(function () {});
+    return t.d(r, "a", r), r;
+  }, t.o = function (e, r) {
+    return Object.prototype.hasOwnProperty.call(e, r);
+  }, t.p = "", t(t.s = 0);
+}([function (e, r, t) {
+  "use strict";
+
+  function n() {
+    $(".js_slider_main").slick({
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      arrows: !0,
+      fade: !0
+    });
+  }
+
+  t.r(r), $(function () {
+    n();
+  });
 }]);

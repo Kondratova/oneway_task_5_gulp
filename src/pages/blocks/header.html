@@ -1,8 +1,10 @@
-<span>Фетч</span>
+<div class="logo">Фетч</div>
 {%
 set headerNav = ['Одежда', 'Обувь', 'Аксессуары', 'Блог', 'Магазин', 'Доставка и оплата']
 %}
-{% for item in headerNav %}
-<a href="">{{ item }}</a>
-{% endfor %}
-<a href="">Оформить заказ</a>
+<nav>
+    {% for item in headerNav %}
+    <a href="">{{ item }}</a>
+    {% endfor %}
+    <a href="">Оформить заказ</a>
+</nav>

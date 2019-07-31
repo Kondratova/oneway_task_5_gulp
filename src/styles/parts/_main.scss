@@ -2,7 +2,39 @@
 //Главный блок
 //////////////////////////////////////////////
 
-.main {
+main {
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  margin-top: 48px;
+  margin-bottom: 64px;
 
+  .about, a:first-child {
+    font-size: 18px;
+  }
+
+  .about {
+    line-height: 23px;
+  }
+
+  p {
+    margin-bottom: 16px;
+  }
+
+  a {
+    color: $color-main-links;
+  }
+
+  nav {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+  }
+
+  .section {
+    font-weight: bold;
+  }
+
+  .subsection {
+    margin-left: 9px;
+  }
 }
 

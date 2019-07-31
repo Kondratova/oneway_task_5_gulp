@@ -1,0 +1,32 @@
+header {
+  position: absolute;
+  width: 100%;
+  padding: 8px 0;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  line-height: 31px;
+  z-index: 1;
+
+  .logo {
+    font-size: $font-size-logo;
+    font-weight: bold;
+    padding-right: 30px;
+  }
+
+  nav {
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: repeat(6, auto) 1fr;
+
+    a {
+      color: $color-default;
+      padding: 0 12px;
+      display: block;
+
+      &:last-child {
+        text-align: right;
+        padding: 0;
+      }
+    }
+  }
+}

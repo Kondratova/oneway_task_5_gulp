@@ -1,5 +1,5 @@
 // Возьмём дебаунс из интернета, отложим в хелперы.
-// import initSliders from './parts/sliders';
+import initSliders from './parts/sliders';
 // import showSpecification from './parts/showSpecification';
 // import handleFormSubmit from './parts/handleFormSubmit';
 // import listenerForm from './parts/listenerForm'
@@ -7,13 +7,11 @@
 
 
 $(() => {
-/*
-    handleFormSubmit();
+    // handleFormSubmit();
     initSliders();
-    showSpecification();
-    listenerMagnific()
-    listenerForm ();
-*/
+    // showSpecification();
+    // listenerMagnific()
+    // listenerForm ();
 });
 
 // localStorage.clear()

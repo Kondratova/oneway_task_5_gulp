@@ -9,11 +9,37 @@
     <header>
         {% include "blocks/header.html" %}
     </header>
-    <div class="slider_container">
-        <img src="assets/img/main_slider_1.webp" alt="">
-    </div>
+</div>
+
+<div class="js_slider_main">
+    {% include "blocks/slider_main.html" %}
+</div>
+
+<div class="container">
     <main>
-        Reebok Aztrek Double
+        <div class="about">
+            <p><b>Фетч</b> — мультибрендовый магазин модной одежды.</p>
+            <p>Следим за трендами и часто обновляем ассортимент.</p>
+            <p>Доставляем по Москве за день, по России — за неделю.</p>
+        </div>
+        <nav>
+            {% set fullMenu = [
+                {section: 'Для мужчин', subsection: ['Верхняя одежда', 'Рубашки и поло', 'Трикотаж', 'Брюки и джинсы', 'Бельё и носки']},
+                {section: 'Для женщин', subsection: ['Верхняя одежда', 'Рубашки и поло', 'Трикотаж', 'Платья и юбки', 'Бельё и носки']},
+                {section: 'Обувь', subsection: ['Кроссовки и кеды', 'Ботинки']},
+                {section: 'Аксессуары', subsection: ['Сумки и рюкзаки', 'Часы', 'Бижутерия', 'Средства для ухода']},
+                {section: 'Скидки', subsection: ['Летняя распродажа', 'Коллекция 2018']},
+            ] %}
+
+            {% for item in fullMenu %}
+                <div>
+                    <p class="section"><a href="">{{ item.section }}</a></p>
+                    {% for subitem in item.subsection %}
+                    <p class="subsection"><a href="">{{ subitem }}</a></p>
+                    {% endfor %}
+                </div>
+            {% endfor %}
+        </nav>
     </main>
     <footer>
         footer
