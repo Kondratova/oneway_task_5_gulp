@@ -89,6 +89,7 @@
     position: relative;
 
     .wrapper_img {
+      overflow: hidden;
       position: absolute;
       top: 0;
       left: 0;
@@ -103,10 +104,25 @@
     img {
       display: block;
       object-fit: cover;
-      //width: 500px;
-      //top: 0;
-      //position: absolute;
     }
 
+  }
+
+  @media screen and (max-width: $screen-jg) {
+    grid-template-columns: 1fr;
+    //grid-template-rows: 320px 1fr 480px;
+    grid-template-areas:
+            "item1"
+            "item2"
+            "item3"
+            "item4";
+    grid-gap: 0;
+
+    .wrapper_img {
+      grid-template-columns: 1fr 50% 1fr;
+    }
+  }
+
+  @media screen and (min-width: $screen-jg) {
   }
 }

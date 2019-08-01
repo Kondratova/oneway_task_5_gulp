@@ -25,7 +25,6 @@
     a {
       color: $color-default;
       width: $width-slider-text;
-      font-weight: 900;
       word-spacing: 0;
     }
 
@@ -34,6 +33,8 @@
 
       a {
         line-height: 62px;
+        width: 100%;
+        margin-left: 16px;
       }
     }
 
@@ -55,4 +56,6 @@
   {
     right: 15px;
   }
+
+
 }

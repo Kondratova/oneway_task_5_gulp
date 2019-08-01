@@ -7,13 +7,13 @@ text: "Звонок бесплатный",
 }] %}
 
 {% for item in fullMenu %}
-<div class="info">
+<div>
     <p class="section"><a href="">{{ item.section }}</a></p>
     {% for subitem in item.subsection %}
     <p class="subsection"><a href="">{{ subitem }}</a></p>
     {% endfor %}
-    <p class="subsection"><a href="">{{ item.email }}</a></p>
-    <p class="subsection"><a href="">{{ item.phone }}</a></p>
-    <p class="subsection"><a href="">{{ item.text }}</a></p>
+    <p class="subsection email"><a href="">{{ item.email }}</a></p>
+    <p class="subsection phone"><a href="">{{ item.phone }}</a></p>
+    <p class="subsection text"><a href="">{{ item.text }}</a></p>
 </div>
 {% endfor %}

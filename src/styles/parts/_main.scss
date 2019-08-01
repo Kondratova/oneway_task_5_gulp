@@ -19,6 +19,15 @@
       margin-bottom: 16px;
     }
   }
+
+  @media screen and (max-width: $screen-jg) {
+    grid-template-columns: 1fr;
+    grid-gap: 24px;
+    margin: 24px 0;
+  }
+
+  @media screen and (min-width: $screen-jg) {
+  }
 }
 
 .fullMenu {
@@ -39,6 +48,14 @@
   .subsection {
     margin-left: 9px;
     margin-bottom: 8px;
+  }
+
+  @media screen and (max-width: $screen-jg) {
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 26px;
+  }
+
+  @media screen and (min-width: $screen-jg) {
   }
 }
 

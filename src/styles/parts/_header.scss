@@ -29,4 +29,16 @@ header {
       }
     }
   }
+
+  @media screen and (max-width: $screen-jg) {
+
+    nav {
+      overflow: scroll;
+      outline: fuchsia solid 1px;
+    }
+  }
+
+  @media screen and (min-width: $screen-jg) {
+
+  }
 }

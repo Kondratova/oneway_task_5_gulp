@@ -3,31 +3,55 @@
 //////////////////////////////////////////////
 
 footer {
-  position: relative;
-  display: grid;
-  grid-template-columns: repeat(6, max-content);
-  grid-gap: 32px;
+  color: white;
+
+  nav {
+    padding: 32px 0 48px 0;
+    display: grid;
+    grid-template-columns: repeat(6, max-content);
+    grid-gap: 48px;
+  }
 
   a {
-    color: $color-main-links;
+    color: inherit;
   }
 
   .section {
+    font-size: 18px;
     font-weight: bold;
     margin-bottom: 12px;
     margin-top: 1px;
   }
 
   .subsection {
-    margin-left: 9px;
+    text-indent: 9px;
     margin-bottom: 8px;
   }
 
-  &:before {
-    content: "aaaa";
-    background: black;
-    position: absolute;
-    width: 100vw;
-    left: 0;
+  .email {
+    margin-top: 32px;
   }
+
+  .phone {
+    margin-bottom: 0;
+  }
+
+  .text, .site_info {
+    font-size: 13px;
+    line-height: 17px;
+  }
+
+  .site_info {
+    color: #666666;
+    margin-bottom: 32px;
+
+    span, a {
+      margin-right: 24px;
+    }
+  }
+}
+
+.wrapper_footer {
+  background: black;
+  width: 100%;
 }
