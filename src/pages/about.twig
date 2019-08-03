@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% include "blocks/meta.html" %}
+</head>
+<body>
+
+<div class="container">
+    <header>
+        {% include "blocks/header.html" %}
+    </header>
+</div>
+
+<div class="container">
+   <main class ="about_company">
+
+       <h1>О магазине Фетч</h1>
+
+       <div class="company_description">
+           <p>В магазине Фетч представлено более 100 ведущих мировых производителей одежды и обуви.</p>
+           <p>Разнообразие ассортимента обеспечивают товары культовых брендов современности: Barbour, Fred Perry, Norse Projects, Edwin и капсульные коллекции компаний, делающих ставку на эксклюзивность и премиальный статус своей продукции — Stone Island, Polo Ralph Lauren, C.P. Company.</p>
+           <p>Приобрести последние можно лишь в нескольких торговых точках по всему миру, включая Фетч.</p>
+           <p>Особый повод для гордости — обширная подборка редких и культовых кроссовок adidas Originals, Nike, New Balance, ASICS, Reebok и другие.</p>
+       </div>
+
+       <div class="contact_details">
+           <div class="wrapper_contact_details">
+           <p class="address">Москва, Тимирязевская, 3</p>
+           <p class="email"><a href="">shop@fetch.ru</a></p>
+           <p class="phone">8 800 912-11-42</p>
+           <p class="text">Звонок бесплатный</p>
+           <p>ИНН/КПП: 2901152637 / 290101001 </p>
+           <p>ОГРН: 1062901063576</p>
+           <p class="bik">БИК: 041117601, к/с 30101810100000000601 </p>
+           <p class="checking_account">Расчетный счет: 40702810004000103812 в отделении N8637 Сбербанка России, Архангельск </p>
+           <p>Генеральный директор — Василенко Артём Викторович</p>
+           </div>
+       </div>
+   </main>
+</div>
+
+<div class="wrapper_footer">
+    <div class="container">
+        <footer>
+            <nav>
+                {% include "blocks/info_footer.html" %}
+                {% include "blocks/fullMenu.html" %}
+            </nav>
+            <div class="site_info">
+                <span>© Фетч-команда, 2019</span>
+                <a href="">Правила обработки персональных данных</a>
+                <a href="">Разработка и поддержка сайта</a>
+            </div>
+        </footer>
+    </div>
+</div>
+
+{% include "blocks/pages_links.html" %}
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script type="text/javascript" src="scripts/slick.min.js" ></script>
+<script src="scripts/magnific.js" ></script>
+<script src="scripts/bundle.js" ></script>
+<script src="scripts/api.js" ></script>
+
+</body>
+</html>

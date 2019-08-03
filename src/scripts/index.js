@@ -1,5 +1,7 @@
 // Возьмём дебаунс из интернета, отложим в хелперы.
 import initSliders from './parts/sliders';
+import initCatalog from './parts/initCatalog';
+
 // import showSpecification from './parts/showSpecification';
 // import handleFormSubmit from './parts/handleFormSubmit';
 // import listenerForm from './parts/listenerForm'
@@ -9,6 +11,8 @@ import initSliders from './parts/sliders';
 $(() => {
     // handleFormSubmit();
     initSliders();
+    initCatalog();
+
     // showSpecification();
     // listenerMagnific()
     // listenerForm ();

@@ -1,0 +1,83 @@
+.js_category_name {
+  color: white;
+  position: relative;
+  margin-top: 8px;
+
+  &:before{
+    content: "";
+    position: absolute;
+    background: black;
+    width: 100%;
+    height: 160px;
+  }
+
+  h1 {
+    font-size: 32px;
+    line-height: 41px;
+    padding: 24px 0 32px 0;
+  }
+}
+
+.catalog {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 240px);
+  grid-gap: 48px 32px;
+
+  >* {
+    outline: #4541FE solid 1px;
+    height: 344px;
+  }
+
+  .item {
+
+  }
+
+  .title {
+    font-weight: bold;
+    margin-top: 4px;
+    margin-right: 50px;
+
+    a {
+      color: inherit;
+    }
+  }
+
+  .subcategory {
+    font-size: 13px;
+    line-height: 17px;
+    margin-top: 4px;
+  }
+
+  .price {
+    font-weight: bold;
+    margin-top: 12px;
+
+    &:after {
+      content: "₽";
+    }
+  }
+}
+
+.wrapper_pages_numbers {
+  margin: 64px 0;
+
+  .title {
+    font-size: 13px;
+    line-height: 17px;
+    margin-bottom: 4px;
+  }
+
+  .js_active_page {
+    font-size: 24px;
+    line-height: 31px;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+
+    &:hover {
+      color: #4541FE;
+    }
+  }
+}

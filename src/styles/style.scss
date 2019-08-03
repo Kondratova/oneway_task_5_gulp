@@ -24,8 +24,10 @@ $color-main-links: #4541FE;
 @import "parts/header";
 @import "parts/sliders";
 @import "parts/content";
+@import "parts/about";
+@import "parts/catalog";
 
-body, p, h2 {
+body, p, h1, h2 {
   margin: 0;
   padding: 0;
 }
@@ -52,7 +54,7 @@ body {
   }
 
   @media screen and (max-width: $screen-jg) {
-    width: 100%;
+    width: 100vw;
   }
 
   @media screen and (min-width: $screen-jg) {

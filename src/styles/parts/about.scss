@@ -1,0 +1,66 @@
+.about_company {
+  padding-bottom: 48px;
+  display: grid;
+  grid-template-columns: 464px 1fr;
+  grid-gap: 15px 86px;
+  grid-template-areas:
+          "head head"
+          "about info"  ;
+  h1 {
+    grid-area: head;
+    margin-top: 43px;
+  }
+
+  .company_description {
+    grid-area: about;
+    padding-top: 27px;
+    font-size: 18px;
+    line-height: 23px;
+
+    p {
+      padding-bottom: 16px;
+    }
+  }
+
+  .contact_details {
+    grid-area: info;
+
+    .wrapper_contact_details {
+
+      background: #F2F2F2;
+      padding: 27px 60px 33px 26px;
+    }
+  }
+
+  .email {
+    margin: 16px 0 11px 0;
+  }
+
+  .text {
+    margin-bottom: 30px;
+  }
+
+  .bik, .checking_account {
+    margin-bottom: 15px;
+  }
+
+
+  @media screen and (max-width: $screen-jg) {
+    padding-bottom: 0;
+    grid-template-columns: 1fr;
+    grid-gap: 8px;
+    grid-template-areas:
+            "head"
+            "about"
+            "info";
+
+    h1, .company_description, .wrapper_contact_details {
+      padding-left: 16px;
+      padding-right: 16px;
+    }
+  }
+
+  @media screen and (min-width: $screen-jg) {
+  }
+
+}

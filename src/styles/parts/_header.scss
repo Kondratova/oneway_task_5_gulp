@@ -1,11 +1,15 @@
 header {
-  position: absolute;
-  width: 100%;
+
   padding: 8px 0;
   display: grid;
   grid-template-columns: auto 1fr;
   line-height: 31px;
-  z-index: 1;
+
+  &.home_page {
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+  }
 
   .logo {
     font-size: $font-size-logo;
@@ -21,6 +25,7 @@ header {
     a {
       color: $color-default;
       padding: 0 12px;
+      white-space: nowrap;
       display: block;
 
       &:last-child {

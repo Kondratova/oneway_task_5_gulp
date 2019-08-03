@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% include "blocks/meta.html" %}
+</head>
+<body>
+
+<div class="container">
+    <header>
+        {% include "blocks/header.html" %}
+    </header>
+</div>
+<div class="js_category_name">
+    <div class="container">
+        <h1>
+            {#Заглушка#}
+            .
+        </h1>
+    </div>
+</div>
+<div class="container">
+    <div class="catalog">
+        {#{% set item_catalog = [
+            {title: "Maison Margiela Fusion Low Sneakers", subcategory: "Кроссовки", price: "92000 ", src: "assets/img/item/muzhskie-krossovki-maison-margiela-fusion-low-top-octane-mix-0_450x450.webp"},
+            {title: "Maison Margiela Fusion Low Sneakers", subcategory: "Кроссовки", price: "92000 ", src: "assets/img/item/zhenskie-krossovki-adidas-originals-falcon-zip-active-gold-core-black-cloud-white-0_676x676.webp"},
+            {title: "Maison Margiela Fusion Low Sneakers", subcategory: "Кроссовки", price: "92000 ", src: "assets/img/item/zhenskie-krossovki-nike-m2k-tekno-se-laser-fuchsia-black-white-0_450x450.webp"},
+        ] %}#}
+
+        {% for i in 0..4 %}
+        {% for item in item_catalog  %}
+        <div class="item">
+            <img src="{{ item.src }}" alt="">
+            <p class="title"><a href="">{{ item.title }}</a></p>
+            <p class="subcategory">{{ item.subcategory }}</p>
+            <p class="price">{{ item.price }}</p>
+        </div>
+        {%  endfor %}
+        {%  endfor %}
+    </div>
+    <div class="wrapper_pages_numbers">
+        <p class="title">Страницы</p>
+        <div class="js_pages_numbers">
+            {#Заглушка#}
+            <a href="" class="js_active_page">1</a>
+        </div>
+    </div>
+</div>
+
+<div class="wrapper_footer">
+    <div class="container">
+        <footer>
+            <nav>
+                {% include "blocks/info_footer.html" %}
+                {% include "blocks/fullMenu.html" %}
+            </nav>
+            <div class="site_info">
+                <span>© Фетч-команда, 2019</span>
+                <a href="">Правила обработки персональных данных</a>
+                <a href="">Разработка и поддержка сайта</a>
+            </div>
+        </footer>
+    </div>
+</div>
+
+{% include "blocks/pages_links.html" %}
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script type="text/javascript" src="scripts/slick.min.js" ></script>
+<script src="scripts/magnific.js" ></script>
+<script src="scripts/bundle.js" ></script>
+<script src="scripts/api.js" ></script>
+
+</body>
+</html>

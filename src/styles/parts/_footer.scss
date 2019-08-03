@@ -10,6 +10,19 @@ footer {
     display: grid;
     grid-template-columns: repeat(6, max-content);
     grid-gap: 48px;
+
+    @media screen and (max-width: $screen-jg) {
+      grid-template-columns: 1fr;
+      grid-gap: 32px;
+      padding-left: 16px ;
+    }
+
+    @media screen and (min-width: $screen-jg) {
+    }
+
+    a:hover {
+      opacity: 0.5;
+    }
   }
 
   a {
@@ -28,30 +41,50 @@ footer {
     margin-bottom: 8px;
   }
 
-  .email {
-    margin-top: 32px;
+  .site_info {
+    color: #666666;
+    margin-bottom: 32px;
+    display: grid;
+    grid-template-columns: repeat(3, max-content);
+    grid-gap: 24px;
+
+    @media screen and (max-width: $screen-jg) {
+      grid-template-columns: 1fr;
+      grid-gap: 12px;
+      padding-left: 16px ;
+    }
+
+    @media screen and (min-width: $screen-jg) {
+    }
+
+    a:hover {
+      color: #ffffff;
+    }
   }
 
   .phone {
     margin-bottom: 0;
   }
 
-  .text, .site_info {
-    font-size: 13px;
-    line-height: 17px;
-  }
-
-  .site_info {
-    color: #666666;
-    margin-bottom: 32px;
-
-    span, a {
-      margin-right: 24px;
-    }
+  .text {
+    opacity: 0.75;
   }
 }
 
 .wrapper_footer {
   background: black;
   width: 100%;
+}
+
+.email {
+  margin-top: 32px;
+}
+
+.phone {
+  font-weight: bold;
+}
+
+.text, .site_info {
+  font-size: 13px;
+  line-height: 17px;
 }

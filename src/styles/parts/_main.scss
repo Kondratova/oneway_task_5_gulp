@@ -7,6 +7,7 @@
   grid-template-columns: 240px 1fr;
   grid-gap: 48px;
   margin: 48px 0;
+  padding: 0 16px;
 
   .about, .section {
     font-size: 18px;
@@ -24,6 +25,10 @@
     grid-template-columns: 1fr;
     grid-gap: 24px;
     margin: 24px 0;
+
+    .about {
+      max-width: 240px;
+    }
   }
 
   @media screen and (min-width: $screen-jg) {
