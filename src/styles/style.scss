@@ -26,6 +26,7 @@ $color-main-links: #4541FE;
 @import "parts/content";
 @import "parts/about";
 @import "parts/catalog";
+@import "parts/cardProduct";
 
 body, p, h1, h2 {
   margin: 0;
@@ -41,14 +42,14 @@ body {
   font-family: $font-family-default;
   font-size: $font-size-default;
   line-height: $line-height-default;
-
 }
 
 .container {
 
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: 100%;
   position: relative;
+
   >* {
     outline: red solid 1px;
   }

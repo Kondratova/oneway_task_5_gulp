@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% include "blocks/meta.html" %}
+</head>
+<body>
+
+<div class="container">
+    <header>
+        {% include "blocks/header.html" %}
+    </header>
+</div>
+
+<div class="container">
+    <main class="card_product">
+        <div class="info_product">
+            {% include "blocks/info_product.html" %}
+        </div>
+
+        <div class="foto_product">
+            <div class="js_slider_product_for slider_product_for">
+                <div class="slide"><img src="assets/img/item/1/img.webp" alt=""></div>
+                <div class="slide"><img src="assets/img/item/1/image.webp" alt=""></div>
+                <div class="slide"><img src="assets/img/item/1/image_2.webp" alt=""></div>
+                <div class="slide"><img src="assets/img/item/1/image_3.webp" alt=""></div>
+            </div>
+
+            <div class="js_slider_product_nav slider_product_nav">
+                <div class="slide"><img src="assets/img/item/1/img.webp" alt=""></div>
+                <div class="slide"><img src="assets/img/item/1/image.webp" alt=""></div>
+                <div class="slide"><img src="assets/img/item/1/image_2.webp" alt=""></div>
+                <div class="slide"><img src="assets/img/item/1/image_3.webp" alt=""></div>
+            </div>
+        </div>
+
+        <div class="interesting">
+            <p>Вам может быть интересно</p>
+            <div class="js_slider_interesting slider_interesting">
+
+                {% set item_catalog = [
+                    {title: "Maison Margiela Fusion Low Sneakers", subcategory: "Кроссовки", price: "92000 ", src: "assets/img/item/1/img.webp"},
+                    {title: "Maison Margiela Fusion Low Sneakers", subcategory: "Кроссовки", price: "92000 ", src: "assets/img/item/2/zhenskie-krossovki-adidas-originals-falcon-zip-active-gold-core-black-cloud-white-0_676x676.webp"},
+                    {title: "Maison Margiela Fusion Low Sneakers", subcategory: "Кроссовки", price: "92000 ", src: "assets/img/item/3/zhenskie-krossovki-nike-m2k-tekno-se-laser-fuchsia-black-white-0_450x450.webp"},
+                ] %}
+
+                {% for i in 0..1 %}
+                    {% for item in item_catalog  %}
+                        <div class="slide">
+                            <img src="{{ item.src }}" alt="">
+                            <p class="title"><a href="">{{ item.title }}</a></p>
+                            <p class="subcategory">{{ item.subcategory }}</p>
+                            <p class="price">{{ item.price }}</p>
+                        </div>
+                    {%  endfor %}
+                {%  endfor %}
+            </div>
+        </div>
+    </main>
+
+    <div class="block_table_size mfp-hide white-popup" id="block_table_size">
+        <p class="close">Таблица размеров</p>
+    </div>
+</div>
+
+<div class="wrapper_footer">
+    <div class="container">
+        <footer>
+            <nav>
+                {% include "blocks/info_footer.html" %}
+                {% include "blocks/fullMenu.html" %}
+            </nav>
+            <div class="site_info">
+                <span>© Фетч-команда, 2019</span>
+                <a href="">Правила обработки персональных данных</a>
+                <a href="">Разработка и поддержка сайта</a>
+            </div>
+        </footer>
+    </div>
+</div>
+
+{% include "blocks/pages_links.html" %}
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script type="text/javascript" src="scripts/slick.min.js" ></script>
+<script src="scripts/magnific.js" ></script>
+<script src="scripts/bundle.js" ></script>
+<script src="scripts/api.js" ></script>
+
+</body>
+</html>

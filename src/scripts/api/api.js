@@ -58,29 +58,98 @@ window.API = {
                 title: "Maison Margiela Fusion Low Sneakers",
                 subcategory: "Кроссовки",
                 price: "92000 ",
-                src: "assets/img/item/muzhskie-krossovki-maison-margiela-fusion-low-top-octane-mix-0_450x450.webp"
+                src: "assets/img/item/1/img.webp"
             },
             {
                 id: "2",
                 title: "Maison Margiela Fusion Low Sneakers",
                 subcategory: "Кроссовки",
                 price: "92000 ",
-                src: "assets/img/item/zhenskie-krossovki-adidas-originals-falcon-zip-active-gold-core-black-cloud-white-0_676x676.webp"
+                src: "assets/img/item/2/zhenskie-krossovki-adidas-originals-falcon-zip-active-gold-core-black-cloud-white-0_676x676.webp"
             },
             {
                 id: "3",
                 title: "Maison Margiela Fusion Low Sneakers",
                 subcategory: "Кроссовки",
                 price: "92000 ",
-                src: "assets/img/item/zhenskie-krossovki-nike-m2k-tekno-se-laser-fuchsia-black-white-0_450x450.webp"
+                src: "assets/img/item/3/zhenskie-krossovki-nike-m2k-tekno-se-laser-fuchsia-black-white-0_450x450.webp"
             },
         ];
 
-        // console.log('onCatalogPage работает');
-        // console.log(`start:${start}`);
-        // console.log(`category:${category}`);
-        // console.log(`items:${items}`);
-
         return items;
+    },
+
+    //Вывод данных в карточку продукта
+    onCardProduct: function (itemId) {
+        // itemId - id товара нажатой ячейки в каталоге
+        // бекенд получает себе id товара
+
+        // эмуляция ответа сервера на фронтенде
+
+        // эмуляция объекта с информацией о товаре
+        // id - номер товара
+        // title - название товара
+        // subcategory - подкатегория товара
+        // price - цена товара
+        // src - массив ссылок на изображения
+
+        var item = {
+                id: "1",
+                title: "Maison Margiela Fusion Low Sneakers",
+                subcategory: "Кроссовки",
+                colors:[
+                    {
+                        color:"Белый с розовым",
+                        colorId: 'whiteWithPink'
+                    },
+                    {
+                        color:"Белый с зелёным",
+                        colorId: "whiteWithGrin"
+                    }
+                    ],
+                sizes:[
+                    {
+                        size: "6",
+                        sizeId: "size6"},
+                    {
+                        size: "6.5",
+                        sizeId: "size6.5"
+                    },
+                    {
+                        size: "7",
+                        sizeId: "size7"},
+                    {
+                        size: "9",
+                        sizeId: "size9"}
+                    ],
+                price: "92000 ",
+                src: [
+                    "assets/img/item/1/img.webp",
+                    "assets/img/item/1/image.webp",
+                    "assets/img/item/1/image_2.webp",
+                    "assets/img/item/1/image_3.webp",
+                ],
+            material: "Кожа, текстиль",
+            country: "Италия",
+            description: [
+                "Деконструктивный и авангардный дизайн с уникальными концепциями и нетрадиционным мастерством.",
+                "В качестве материала используются два вида кожи. Верх дополнен деталями из сетчатого материала и текстиля.",
+                "Грубые и многослойные кроссовки показывают отличие от традиционного аккуратного стиля создания обуви. Они оснащены раскрашенной вручную резиновой подошвой с брызгами и потеками.",
+                "Оригинальная слегка асимметричная система шнуровки и фирменный стежок на заднике завершают уникальный внешний вид."
+                ],
+            details: [
+                "Два вида кожи",
+                "Детали из текстиля",
+                "Неординарная шнуровка",
+                "Перфорация на мыске",
+                "Стежок на заднике",
+                "Фигурная резиновая подошва",
+                "Цепкая подметка",
+                "Окрашивание с брызгами и потеками",
+                "Пестрая расцветка"
+            ]
+        };
+
+        return item;
     }
 };

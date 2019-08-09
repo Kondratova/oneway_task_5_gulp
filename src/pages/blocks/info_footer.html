@@ -13,7 +13,7 @@ text: "Звонок бесплатный",
     <p class="subsection"><a href="">{{ subitem }}</a></p>
     {% endfor %}
     <p class="subsection email"><a href="">{{ item.email }}</a></p>
-    <p class="subsection phone"><a href="">{{ item.phone }}</a></p>
+    <p class="subsection phone">{{ item.phone }}</p>
     <p class="subsection text">{{ item.text }}</p>
 </div>
 {% endfor %}

@@ -40,7 +40,7 @@ function changeItemCatalog(numberPage) {
 
      itemsValue.forEach( (item) => {
          arrItems.push(`        
-            <div class="item">
+            <div class="item" id="${ item.id }">
                 <img src="${ item.src }" alt="">
                 <p class="title"><a href="">${ item.title }</a></p>
                 <p class="subcategory">${ item.subcategory }</p>
@@ -72,7 +72,6 @@ function showActivePage() {
 }
 
 export default function initCatalog() {
-
     showCategory();
     showNumberOfPages ();
     showActivePage();

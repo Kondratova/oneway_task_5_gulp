@@ -20,16 +20,20 @@
 
 .catalog {
   display: grid;
-  grid-template-columns: repeat(auto-fill, 240px);
+  grid-template-columns: repeat(auto-fit, 240px);
   grid-gap: 48px 32px;
 
   >* {
     outline: #4541FE solid 1px;
-    height: 344px;
   }
 
   .item {
 
+  }
+
+  img {
+    width: 100%;
+    object-fit: contain;
   }
 
   .title {
@@ -39,6 +43,12 @@
 
     a {
       color: inherit;
+    }
+
+    @media screen and (max-width: $screen-jg) {
+      font-size: 13px;
+      line-height: 17px;
+      margin-right: 0;
     }
   }
 
@@ -55,6 +65,10 @@
     &:after {
       content: "₽";
     }
+  }
+  @media screen and (max-width: $screen-jg) {
+    grid-template-columns: repeat(auto-fit, 136px);
+    grid-gap: 32px 16px;
   }
 }
 
@@ -80,4 +94,12 @@
       color: #4541FE;
     }
   }
+}
+@media screen and (max-width: $screen-jg) {
+  .catalog, .wrapper_pages_numbers {
+    padding: 0 16px;
+  }
+}
+
+@media screen and (min-width: $screen-jg) {
 }
