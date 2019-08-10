@@ -35,6 +35,10 @@ header {
     }
   }
 
+  .link_basket:before {
+    content: attr(data-before);
+  }
+
   @media screen and (max-width: $screen-jg) {
 
     nav {

@@ -3,6 +3,7 @@ import initSliders from './parts/sliders';
 import initCatalog from './parts/initCatalog';
 import showTableSize from './parts/showTableSize';
 import initCardProduct from './parts/initCardProduct'
+import handleFormBuyProductSubmit from './parts/handleFormBuyProductSubmit';
 
 // import handleFormSubmit from './parts/handleFormSubmit';
 // import listenerForm from './parts/listenerForm'
@@ -15,6 +16,8 @@ $(() => {
     initCatalog();
     showTableSize();
     initCardProduct();
+    handleFormBuyProductSubmit();
+
 
     // listenerForm ();
 });

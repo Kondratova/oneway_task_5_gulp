@@ -123,11 +123,17 @@ window.API = {
                         sizeId: "size9"}
                     ],
                 price: "92000 ",
-                src: [
+                srcSmall: [
                     "assets/img/item/1/img.webp",
                     "assets/img/item/1/image.webp",
                     "assets/img/item/1/image_2.webp",
                     "assets/img/item/1/image_3.webp",
+                ],
+                srcBig: [
+                    "assets/img/item/1/img_big.webp",
+                    "assets/img/item/1/image_big.webp",
+                    "assets/img/item/1/image_2_big.webp",
+                    "assets/img/item/1/image_3_big.webp",
                 ],
             material: "Кожа, текстиль",
             country: "Италия",

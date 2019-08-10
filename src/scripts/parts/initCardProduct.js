@@ -24,7 +24,7 @@ function initSize(item) {
 
     item.sizes.forEach( (size) => {
         arrSize.push(`        
-            <input type="radio" name="color" id="${size.sizeId}" value="${ size.size }">
+            <input type="radio" name="size" id="${size.sizeId}" value="${ size.size }">
             <label for="${size.sizeId}">${ size.size }</label>
         `)}
     );
@@ -40,7 +40,7 @@ function initCountry(item) {
 }
 
 function initMaterial(item) {
-    $('.js_wrapper_material').html(`<p class="content">${item.material}</p>`);
+    $('.js_wrapper_content_material').html(`<p class="content">${item.material}</p>`);
 }
 
 function initDescription(item) {
@@ -62,7 +62,19 @@ function initDetails(item) {
             <p class="content">${el}</p>
         `)}
     );
-    $('.js_wrapper_content_details').html(arrDescription.join(' '));
+    $('.js_wrapper_content_details').html(arrDetails.join(' '));
+}
+
+function initSliderProduct(item) {
+    let arrSlideFor = [];
+    let arrSlideNav = [];
+
+    item.srcBig.forEach( (src) => {
+        arrSlideFor.push(`
+            <div class="slide"><img src="${src}" alt=""></div>
+        `)}
+    );
+    $('.js_slider_product_for').html(arrSlideFor.join(' '));
 }
 
 export default function initCardProduct() {
@@ -78,6 +90,5 @@ export default function initCardProduct() {
     initCountry(item);
     initDescription(item);
     initDetails(item);
-
-    console.log('связь со с карточкой продукта установлена');
+    // initSliderProduct(item);
 }
