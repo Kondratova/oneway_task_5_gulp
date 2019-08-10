@@ -17,6 +17,8 @@ function initColors(item) {
         `)}
     );
     $('.js_wrapper_content_color').html(arrColors.join(' '));
+
+    //комм
 }
 
 function initSize(item) {
