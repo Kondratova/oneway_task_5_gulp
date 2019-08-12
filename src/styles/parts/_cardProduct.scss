@@ -36,6 +36,7 @@
         background: #F2F2F2;
         width: 100%;
         height: 100%;
+
         @media screen and (max-width: $screen-jg) {
         }
 
@@ -132,67 +133,7 @@
     }
   }
 
-  .interesting {
-    grid-column-start: 1;
-    grid-column-end: 3;
 
-    width: 100%;
-
-    >p {
-      font-size: 25px;
-      line-height: 32px;
-      font-weight: bold;
-      padding-bottom: 24px;
-
-    }
-
-    .slider_interesting {
-      padding: 0 25px;
-      margin-bottom: 64px;
-      width: 100%;
-
-      :before {
-        color: red;
-      }
-    }
-
-    .slide {
-      margin: 0 16px;
-
-      img{
-        width: 100%;
-        margin-bottom: 7px;
-      }
-
-      .title {
-        font-weight: bold;
-        margin-top: 4px;
-        margin-right: 50px;
-
-        a {
-          color: inherit;
-        }
-
-      }
-
-      .subcategory {
-        font-size: 13px;
-        line-height: 17px;
-        margin-top: 4px;
-
-      }
-
-      .price{
-        font-weight: bold;
-        margin-top: 12px;
-
-        &:after {
-          content: "₽";
-        }
-
-      }
-    }
-  }
 
   .about_product {
     display: grid;
@@ -245,6 +186,11 @@
     }
   }
 
+  .interesting {
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+
   @media screen and (max-width: $screen-jg) {
     grid-template-columns: 100%;
 
@@ -262,7 +208,6 @@
       grid-column-start: 1;
       grid-column-end: 2;
     }
-
   }
 
   @media screen and (min-width: $screen-jg) {
@@ -272,4 +217,58 @@
 .block_table_size {
   background: white;
 
+}
+
+.interesting {
+  width: 100%;
+
+  > p {
+    font-size: 25px;
+    line-height: 32px;
+    font-weight: bold;
+    padding-bottom: 24px;
+
+  }
+
+  .slider_interesting {
+    padding: 0 25px;
+    margin-bottom: 64px;
+    width: 100%;
+
+    :before {
+      color: red;
+    }
+  }
+
+  .slide {
+    margin: 0 16px;
+
+    img {
+      width: 100%;
+      margin-bottom: 7px;
+    }
+
+    .title {
+      font-weight: bold;
+      margin-top: 4px;
+      margin-right: 50px;
+
+      a {
+        color: inherit;
+      }
+
+    }
+
+    .subcategory {
+      font-size: 13px;
+      line-height: 17px;
+      margin-top: 4px;
+
+    }
+
+    .price {
+      font-weight: bold;
+      margin-top: 12px;
+    }
+  }
 }

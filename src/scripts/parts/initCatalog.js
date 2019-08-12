@@ -16,7 +16,6 @@ function showNumberOfPages() {
     }
 
     $('.js_pages_numbers').html(numbers.join(' '));
-    // console.log(numberOfPages);
 }
 
 // изменяем активный номер страницы
@@ -34,29 +33,21 @@ function changeActiveNumber(event) {
 function changeItemCatalog(numberPage) {
     let itemsValue = window.API.onCatalogPage(numberPage);
 
-    // Объявляем массив с первой страницей и задем ей стиль активной
-    let arrItems = [];
-    // Добавляем следующие страницы если они есть
-
-     itemsValue.forEach( (item) => {
-         arrItems.push(`        
-            <div class="item" id="${ item.id }">
+    $('.catalog').html(itemsValue.map(item =>
+        `<div class="item" id="${ item.id }">
                 <img src="${ item.src }" alt="">
                 <p class="title"><a href="">${ item.title }</a></p>
                 <p class="subcategory">${ item.subcategory }</p>
                 <p class="price">${ item.price }</p>
-            </div>
-        `)}
-     );
-
-
-    $('.catalog').html(arrItems.join(' '));
+            </div>`
+    ));
 
     // console.log(arrItems);
 }
 
 // Показываем страницу по номеру которой нажали
 function showActivePage() {
+
     changeItemCatalog(1);
 
     $('.js_pages_numbers a').on('click', function (event) {

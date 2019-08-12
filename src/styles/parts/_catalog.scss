@@ -61,11 +61,8 @@
   .price {
     font-weight: bold;
     margin-top: 12px;
-
-    &:after {
-      content: "₽";
-    }
   }
+
   @media screen and (max-width: $screen-jg) {
     grid-template-columns: repeat(auto-fit, 136px);
     grid-gap: 32px 16px;

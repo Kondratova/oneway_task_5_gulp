@@ -26,44 +26,212 @@
 <meta property="og:image" content="" />
 <meta property="og:description" content="" />
 </head>
-<body>
+<body class="js_checkout">
 
 <div class="container">
+    <header class="checkout_header">
+        <div class="logo">Фетч</div>
 
+        <nav>
+
+            <a href="">Одежда</a>
+
+            <a href="">Обувь</a>
+
+            <a href="">Аксессуары</a>
+
+            <a href="">Блог</a>
+
+            <a href="">Магазин</a>
+
+            <a href="">Доставка и оплата</a>
+
+            <a href="" class="js_link_basket link_basket">Оформить заказ</a>
+        </nav>
+    </header>
 </div>
 
 <div class="container">
-   <main class ="checkout">
+    <div class="title_h1_checkout">
+        Фетч • Оформление заказа
+    </div>
+    <div class="wrapper_checkout">
+        <div class="checkout">
+            <div class="selected_products">
+            </div>
 
-       <h1>Фетч • Оформление заказа</h1>
+            <div class="wrapper_form_checkout">
+                <form action="">
+                    <section>
+                        <label for="email">Эл. почта</label>
+                        <div class="wrapper_input">
+                            <input id="email" type="email" placeholder="petrov@yandex.ru">
+                            <p>Пришлём чеки и трек-номер</p>
+                        </div>
+                        <label for="telephone">Телефон</label>
+                        <div class="wrapper_input">
+                            <input id="telephone" type="tel" placeholder="+7 999 275-12-37">
+                            <p>Менеджер позвонит, чтобы подтвердить заказ</p>
+                        </div>
+                        <label for="city">Город</label>
+                        <div class="wrapper_input">
+                            <input id="city" type="text" placeholder="Москва">
+                        </div>
+                        <label for="address">Адрес</label>
+                        <div class="wrapper_input">
+                            <textarea id="address" name="comment" cols="40" rows="3"
+                                      placeholder="Тимирязевская, 32, квартира 99, вход со двора"></textarea>
+                        </div>
+                    </section>
+                    <section>
+                        <p>Бесплатная доставка курьером.</p>
+                        <p>Оплата картой онлайн.</p>
+                        <button type="submit">Оформить заказ, <span class="price js_price"></span></button>
+                    </section>
+                </form>
+            </div>
 
-       <div class="company_description">
-           <p>В магазине Фетч представлено более 100 ведущих мировых производителей одежды и обуви.</p>
-           <p>Разнообразие ассортимента обеспечивают товары культовых брендов современности: Barbour, Fred Perry, Norse Projects, Edwin и капсульные коллекции компаний, делающих ставку на эксклюзивность и премиальный статус своей продукции — Stone Island, Polo Ralph Lauren, C.P. Company.</p>
-           <p>Приобрести последние можно лишь в нескольких торговых точках по всему миру, включая Фетч.</p>
-           <p>Особый повод для гордости — обширная подборка редких и культовых кроссовок adidas Originals, Nike, New Balance, ASICS, Reebok и другие.</p>
-       </div>
+            <div class="selected_products_price">
+                <p class="price js_price">Выбранные товары</p>
+                <p class="text">Доставка бесплатно</p>
+            </div>
+        </div>
+    </div>
+    <div class="interesting interesting_checkout">
+        <p>Вам может быть интересно</p>
+        <div class="js_slider_interesting_checkout slider_interesting">
 
-       <div class="contact_details">
-           <div class="wrapper_contact_details">
-           <p class="address">Москва, Тимирязевская, 3</p>
-           <p class="email"><a href="">shop@fetch.ru</a></p>
-           <p class="phone">8 800 912-11-42</p>
-           <p class="text">Звонок бесплатный</p>
-           <p>ИНН/КПП: 2901152637 / 290101001 </p>
-           <p>ОГРН: 1062901063576</p>
-           <p class="bik">БИК: 041117601, к/с 30101810100000000601 </p>
-           <p class="checking_account">Расчетный счет: 40702810004000103812 в отделении N8637 Сбербанка России, Архангельск </p>
-           <p>Генеральный директор — Василенко Артём Викторович</p>
-           </div>
-       </div>
-   </main>
+            <div class="slide">
+                <img src="assets/img/item/1/img.webp" alt="">
+                <p class="title"><a href="">Maison Margiela Fusion Low Sneakers</a></p>
+                <p class="subcategory">Кроссовки</p>
+                <p class="price">92000 </p>
+            </div>
+
+            <div class="slide">
+                <img src="assets/img/item/2/zhenskie-krossovki-adidas-originals-falcon-zip-active-gold-core-black-cloud-white-0_676x676.webp"
+                     alt="">
+                <p class="title"><a href="">Maison Margiela Fusion Low Sneakers</a></p>
+                <p class="subcategory">Кроссовки</p>
+                <p class="price">92000 </p>
+            </div>
+
+            <div class="slide">
+                <img src="assets/img/item/3/zhenskie-krossovki-nike-m2k-tekno-se-laser-fuchsia-black-white-0_450x450.webp"
+                     alt="">
+                <p class="title"><a href="">Maison Margiela Fusion Low Sneakers</a></p>
+                <p class="subcategory">Кроссовки</p>
+                <p class="price">92000 </p>
+            </div>
+
+            <div class="slide">
+                <img src="assets/img/item/1/img.webp" alt="">
+                <p class="title"><a href="">Maison Margiela Fusion Low Sneakers</a></p>
+                <p class="subcategory">Кроссовки</p>
+                <p class="price">92000 </p>
+            </div>
+
+            <div class="slide">
+                <img src="assets/img/item/2/zhenskie-krossovki-adidas-originals-falcon-zip-active-gold-core-black-cloud-white-0_676x676.webp"
+                     alt="">
+                <p class="title"><a href="">Maison Margiela Fusion Low Sneakers</a></p>
+                <p class="subcategory">Кроссовки</p>
+                <p class="price">92000 </p>
+            </div>
+
+            <div class="slide">
+                <img src="assets/img/item/3/zhenskie-krossovki-nike-m2k-tekno-se-laser-fuchsia-black-white-0_450x450.webp"
+                     alt="">
+                <p class="title"><a href="">Maison Margiela Fusion Low Sneakers</a></p>
+                <p class="subcategory">Кроссовки</p>
+                <p class="price">92000 </p>
+            </div>
+
+        </div>
+    </div>
 </div>
 
-<div class="wrapper_footer">
+<div class="wrapper_footer wrapper_footer_checkout">
     <div class="container">
         <footer>
+            <nav class="nav_checkout">
 
+                <div class="info_footer">
+                    <p class="section"><a href="">Фетч</a></p>
+
+                    <p class="subsection"><a href="">Магазин</a></p>
+
+                    <p class="subsection"><a href="">Блог</a></p>
+
+                    <p class="subsection"><a href="">Доставка и оплата</a></p>
+
+                    <p class="subsection email"><a href="">shop@fetch.ru</a></p>
+                    <p class="subsection phone">8 800 912-11-42</p>
+                    <p class="subsection text">Звонок бесплатный</p>
+                </div>
+
+                <div>
+                    <p class="section"><a href="">Для мужчин</a></p>
+
+                    <p class="subsection"><a href="">Верхняя одежда</a></p>
+
+                    <p class="subsection"><a href="">Рубашки и поло</a></p>
+
+                    <p class="subsection"><a href="">Трикотаж</a></p>
+
+                    <p class="subsection"><a href="">Брюки и джинсы</a></p>
+
+                    <p class="subsection"><a href="">Бельё и носки</a></p>
+
+                </div>
+
+                <div>
+                    <p class="section"><a href="">Для женщин</a></p>
+
+                    <p class="subsection"><a href="">Верхняя одежда</a></p>
+
+                    <p class="subsection"><a href="">Рубашки и поло</a></p>
+
+                    <p class="subsection"><a href="">Трикотаж</a></p>
+
+                    <p class="subsection"><a href="">Платья и юбки</a></p>
+
+                    <p class="subsection"><a href="">Бельё и носки</a></p>
+
+                </div>
+
+                <div>
+                    <p class="section"><a href="">Обувь</a></p>
+
+                    <p class="subsection"><a href="">Кроссовки и кеды</a></p>
+
+                    <p class="subsection"><a href="">Ботинки</a></p>
+
+                </div>
+
+                <div>
+                    <p class="section"><a href="">Аксессуары</a></p>
+
+                    <p class="subsection"><a href="">Сумки и рюкзаки</a></p>
+
+                    <p class="subsection"><a href="">Часы</a></p>
+
+                    <p class="subsection"><a href="">Бижутерия</a></p>
+
+                    <p class="subsection"><a href="">Средства для ухода</a></p>
+
+                </div>
+
+                <div>
+                    <p class="section"><a href="">Скидки</a></p>
+
+                    <p class="subsection"><a href="">Летняя распродажа</a></p>
+
+                    <p class="subsection"><a href="">Коллекция 2018</a></p>
+
+                </div>
+
+            </nav>
             <div class="site_info">
                 <span>© Фетч-команда, 2019</span>
                 <a href="">Правила обработки персональных данных</a>

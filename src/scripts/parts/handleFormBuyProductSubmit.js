@@ -1,3 +1,4 @@
+import {showPurchasedItemsNumber} from '.././parts/showPurchasedItemsNumber';
 
 //запоминаем купленный товар
 function rememberBuyProduct(item) {
@@ -15,30 +16,22 @@ function rememberBuyProduct(item) {
     }
 }
 
-function showNumberItemsPurchased() {
-    let returnArr = JSON.parse(localStorage.getItem("purchasedProducts"));
 
-    $('.js_link_basket').attr('data-before',`${returnArr.length-1}`);
-}
-
-export default function handleFormBuyProductSubmit() {
-
-    showNumberItemsPurchased();
-
+export default function handleFormBuyProductSubmit(item) {
     $('.js_btn_buy_product').on('click', e => {
         e.preventDefault();
 
-        let colorProduct = $("input[name=\"color\"]:checked").val();
-        let sizeProduct = $("input[name=\"size\"]:checked").val();
-
-        let obj ={
-            colorProduct: colorProduct,
-            sizeProduct: sizeProduct
+        let product = {
+            id: item.id,
+            title: item.title,
+            subcategory: item.subcategory,
+            price: item.price,
+            src: item.srcSmall[0],
+            color: $("input[name=\"color\"]:checked").val(),
+            size: $("input[name=\"size\"]:checked").val(),
         };
 
-        rememberBuyProduct(obj);
-        showNumberItemsPurchased();
-
-        console.log("покупка работает");
+        rememberBuyProduct(product);
+        showPurchasedItemsNumber();
     });
 }

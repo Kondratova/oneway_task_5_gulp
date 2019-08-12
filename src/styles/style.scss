@@ -13,8 +13,8 @@ $color-main-links: #4541FE;
 
 //сss переменные
 :root {
-  --color-link: #256b00;
-  --hide-img: 1;
+  --display-header-checkout: none;
+  --background-wrapper-footer: white;
 }
 
 //подключение частей scss
@@ -27,6 +27,7 @@ $color-main-links: #4541FE;
 @import "parts/about";
 @import "parts/catalog";
 @import "parts/cardProduct";
+@import "parts/checkout";
 
 body, p, h1, h2 {
   margin: 0;
@@ -62,6 +63,10 @@ body {
     width: $width-content;
     margin: 0 auto;
   }
+}
+
+.price:after {
+  content: "₽";
 }
 
 @media screen and (max-width: $screen-jg) {

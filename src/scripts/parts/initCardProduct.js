@@ -1,96 +1,99 @@
+import {initSliderProductFor, initSliderProductNav} from '.././parts/sliders';
 
-function initTitle(item) {
-    $('.js_title_h1').html(`<p>${item.title}</p>`);
+function showId(id) {
+    document.body.id = id;
 }
 
-function initSubcategory(item) {
-    $('.js_subcategory').html(`<p>${item.subcategory}</p>`);
+function showTitle(title) {
+    $('.js_title_h1').html(`<p>${title}</p>`);
 }
 
-function initColors(item) {
-    let arrColors = [];
-
-    item.colors.forEach( (color) => {
-        arrColors.push(`        
-            <input type="radio" name="color" id="${color.colorId}" value="${ color.color }">
-            <label for="${color.colorId}">${ color.color }</label>
-        `)}
-    );
-    $('.js_wrapper_content_color').html(arrColors.join(' '));
-
-    //комм
+function showSubcategory(subcategory) {
+    $('.js_subcategory').html(`<p>${subcategory}</p>`);
 }
 
-function initSize(item) {
-    let arrSize = [];
-
-    item.sizes.forEach( (size) => {
-        arrSize.push(`        
-            <input type="radio" name="size" id="${size.sizeId}" value="${ size.size }">
-            <label for="${size.sizeId}">${ size.size }</label>
-        `)}
-    );
-    $('.js_wrapper_content_size').html(arrSize.join(' '));
+function showColors(colors) {
+    $('.js_wrapper_content_color').html(colors.map(color =>
+        `<input type="radio" name="color" id="${color.colorId}" value="${ color.color }">
+         <label for="${color.colorId}">${ color.color }</label>`
+    ));
 }
 
-function initPrice(item) {
-    $('.js_price').html(item.price);
+function showSize(sizes) {
+    $('.js_wrapper_content_size').html(sizes.map(size =>
+        `<input type="radio" name="size" id="${size.sizeId}" value="${ size.size }">
+            <label for="${size.sizeId}">${ size.size }</label>`
+    ));
 }
 
-function initCountry(item) {
-    $('.js_wrapper_content_country').html(`<p class="content">${item.country}</p>`);
+function showPrice(price) {
+    $('.js_price').html(price);
 }
 
-function initMaterial(item) {
-    $('.js_wrapper_content_material').html(`<p class="content">${item.material}</p>`);
+function showMaterial(material) {
+    $('.js_wrapper_content_material').html(`<p class="content">${material}</p>`);
 }
 
-function initDescription(item) {
-    let arrDescription = [];
-
-    item.description.forEach( (el) => {
-        arrDescription.push(`        
-            <p class="content">${el}</p>
-        `)}
-    );
-    $('.js_wrapper_content_description').html(arrDescription.join(' '));
+function showCountry(country) {
+    $('.js_wrapper_content_country').html(`<p class="content">${country}</p>`);
 }
 
-function initDetails(item) {
-    let arrDetails = [];
-
-    item.details.forEach( (el) => {
-        arrDetails.push(`        
-            <p class="content">${el}</p>
-        `)}
-    );
-    $('.js_wrapper_content_details').html(arrDetails.join(' '));
+function showDescription(description) {
+    $('.js_wrapper_content_description').html(description.map(el =>
+        `<p class="content">${el}</p>`
+    ));
 }
 
-function initSliderProduct(item) {
-    let arrSlideFor = [];
-    let arrSlideNav = [];
+function showDetails(details) {
+    $('.js_wrapper_content_details').html(details.map(el =>
+        `<p class="content">${el}</p>`
+    ));
+}
 
-    item.srcBig.forEach( (src) => {
-        arrSlideFor.push(`
+function showSliderProduct(srcBig, srcSmall) {
+
+    $('.js_slider_product_for').html(srcBig.map(src =>
+        `<div class="slide"><img src="${src}" alt=""></div>`
+    ));
+
+    $('.js_slider_product_nav').html(srcSmall.map(src =>
+        `<div class="slide"><img src="${src}" alt=""></div>`
+    ));
+
+    initSliderProductFor();
+    initSliderProductNav();
+}
+
+//Доделать возможность получения списка интересного с сервера
+/*function initIinterestingSlider(item) {
+    let arrIinterestingSlide = [];
+
+    item.src.forEach( (src) => {
+        arrIinterestingSlide.push(`
             <div class="slide"><img src="${src}" alt=""></div>
         `)}
     );
-    $('.js_slider_product_for').html(arrSlideFor.join(' '));
-}
+    $('.js_slider_product_for').html(arrIinterestingSlide.join(' '));
+
+
+    initIinterestingSlider();
+}*/
 
 export default function initCardProduct() {
 
     let item = window.API.onCardProduct(1);
 
-    initTitle(item);
-    initSubcategory(item);
-    initColors(item);
-    initSize(item);
-    initPrice(item);
-    initMaterial(item);
-    initCountry(item);
-    initDescription(item);
-    initDetails(item);
-    // initSliderProduct(item);
+    showId(item.id);
+    showTitle(item.title);
+    showSubcategory(item.subcategory);
+    showColors(item.colors);
+    showSize(item.sizes);
+    showPrice(item.price);
+    showMaterial(item.material);
+    showCountry(item.country);
+    showDescription(item.description);
+    showDetails(item.details);
+    showSliderProduct(item.srcBig, item.srcSmall);
+
+    return item;
 }

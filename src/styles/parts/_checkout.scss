@@ -1,0 +1,144 @@
+.checkout_header, .nav_checkout, .interesting_checkout {
+  display: var(--display-header-checkout);
+}
+
+.wrapper_footer_checkout {
+  background: var(--background-wrapper-footer);
+}
+
+.title_h1_checkout {
+  margin: 32px 0;
+  font-size: 32px;
+  line-height: 41px;
+  font-weight: bold;
+}
+
+.checkout {
+  display: grid;
+  grid-template-columns: 464px 488px;
+  grid-gap: 0 88px;
+
+  > * {
+    outline: magenta solid 1px;
+  }
+
+  .selected_products {
+    .item {
+      width: 339px;
+      display: grid;
+      grid-template-columns: 160px 1fr;
+      grid-gap: 16px;
+      margin-bottom: 24px;
+
+      img {
+        width: 100%;
+      }
+
+      .title {
+        font-weight: bold;
+        line-height: 21px;
+
+        a {
+          color: inherit;
+          text-decoration: none;
+        }
+
+        @media screen and (max-width: $screen-jg) {
+          font-size: 13px;
+          line-height: 17px;
+          margin-right: 0;
+        }
+      }
+
+      .subcategory {
+        font-size: 13px;
+        line-height: 17px;
+        margin-top: 4px;
+      }
+
+      .price {
+        font-weight: bold;
+        margin-top: 15px;
+      }
+    }
+  }
+
+  .wrapper_form_checkout {
+
+    section {
+      display: grid;
+      grid-template-columns: max-content 1fr;
+
+      label {
+        padding-right: 40px;
+        padding-left: 24px;
+        line-height: 42px;
+      }
+
+      .wrapper_input {
+        margin-bottom: 24px;
+
+        &:nth-of-type(2) {
+          margin-bottom: 40px;
+        }
+
+        p {
+          font-size: 13px;
+          line-height: 17px;
+          color: #666666;
+          margin-top: 5px;
+          margin-left: 11px;
+        }
+      }
+    }
+
+    input, textarea {
+      width: 265px;
+      padding: 8px 11px 10px 11px;
+      font-size: inherit;
+      line-height: inherit;
+      font-family: inherit;
+      box-sizing: border-box;
+      background: #FBFBFB;
+      border: #DDDDDD solid 1px;
+      border-radius: 2px;
+
+      &::placeholder {
+        color: #DDDDDD;
+      }
+    }
+
+    textarea {
+      resize: none;
+    }
+  }
+
+  .selected_products_price {
+    text-align: right;
+    margin-bottom: 80px;
+
+    .price {
+      font-size: 24px;
+      line-height: 31px;
+      font-weight: bold;
+      margin-top: 17px;
+    }
+
+    .text {
+      font-size: 13px;
+      line-height: 17px;
+      color: #666666;
+    }
+  }
+
+  @media screen and (max-width: $screen-jg) {
+    grid-template-columns: 1fr
+  }
+
+  @media screen and (min-width: $screen-jg) {
+  }
+}
+
+#address {
+  height: 84px;
+}

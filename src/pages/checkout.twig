@@ -3,49 +3,75 @@
 <head>
     {% include "blocks/meta.html" %}
 </head>
-<body>
+<body class="js_checkout">
 
 <div class="container">
-    {#<header>#}
-        {#{% include "blocks/header.html" %}#}
-    {#</header>#}
+    <header class="checkout_header">
+        {% include "blocks/header.html" %}
+    </header>
 </div>
 
 <div class="container">
-   <main class ="checkout">
+    <div class="title_h1_checkout">
+        Фетч • Оформление заказа
+    </div>
+    <div class="wrapper_checkout">
+        <div class="checkout">
+            <div class="selected_products">
+            </div>
 
-       <h1>Фетч • Оформление заказа</h1>
+            <div class="wrapper_form_checkout">
+                <form action="">
+                    <section>
+                        <label for="email">Эл. почта</label>
+                        <div class="wrapper_input">
+                            <input id="email" type="email" placeholder="petrov@yandex.ru">
+                            <p>Пришлём чеки и трек-номер</p>
+                        </div>
+                        <label for="telephone">Телефон</label>
+                        <div class="wrapper_input">
+                            <input id="telephone" type="tel" placeholder="+7 999 275-12-37">
+                            <p>Менеджер позвонит, чтобы подтвердить заказ</p>
+                        </div>
+                        <label for="city">Город</label>
+                        <div class="wrapper_input">
+                            <input id="city" type="text" placeholder="Москва">
+                        </div>
+                        <label for="address">Адрес</label>
+                        <div class="wrapper_input">
+                            <textarea id="address" name="comment" cols="40" rows="3"
+                                      placeholder="Тимирязевская, 32, квартира 99, вход со двора"></textarea>
+                        </div>
+                    </section>
+                    <section>
+                        <p>Бесплатная доставка курьером.</p>
+                        <p>Оплата картой онлайн.</p>
+                        <button type="submit">Оформить заказ, <span class="price js_price"></span></button>
+                    </section>
+                </form>
+            </div>
 
-       <div class="company_description">
-           <p>В магазине Фетч представлено более 100 ведущих мировых производителей одежды и обуви.</p>
-           <p>Разнообразие ассортимента обеспечивают товары культовых брендов современности: Barbour, Fred Perry, Norse Projects, Edwin и капсульные коллекции компаний, делающих ставку на эксклюзивность и премиальный статус своей продукции — Stone Island, Polo Ralph Lauren, C.P. Company.</p>
-           <p>Приобрести последние можно лишь в нескольких торговых точках по всему миру, включая Фетч.</p>
-           <p>Особый повод для гордости — обширная подборка редких и культовых кроссовок adidas Originals, Nike, New Balance, ASICS, Reebok и другие.</p>
-       </div>
-
-       <div class="contact_details">
-           <div class="wrapper_contact_details">
-           <p class="address">Москва, Тимирязевская, 3</p>
-           <p class="email"><a href="">shop@fetch.ru</a></p>
-           <p class="phone">8 800 912-11-42</p>
-           <p class="text">Звонок бесплатный</p>
-           <p>ИНН/КПП: 2901152637 / 290101001 </p>
-           <p>ОГРН: 1062901063576</p>
-           <p class="bik">БИК: 041117601, к/с 30101810100000000601 </p>
-           <p class="checking_account">Расчетный счет: 40702810004000103812 в отделении N8637 Сбербанка России, Архангельск </p>
-           <p>Генеральный директор — Василенко Артём Викторович</p>
-           </div>
-       </div>
-   </main>
+            <div class="selected_products_price">
+                <p class="price js_price">Выбранные товары</p>
+                <p class="text">Доставка бесплатно</p>
+            </div>
+        </div>
+    </div>
+    <div class="interesting interesting_checkout">
+        <p>Вам может быть интересно</p>
+        <div class="js_slider_interesting_checkout slider_interesting">
+            {% include "blocks/interesting.html" %}
+        </div>
+    </div>
 </div>
 
-<div class="wrapper_footer">
+<div class="wrapper_footer wrapper_footer_checkout">
     <div class="container">
         <footer>
-            {#<nav>#}
-                {#{% include "blocks/info_footer.html" %}#}
-                {#{% include "blocks/fullMenu.html" %}#}
-            {#</nav>#}
+            <nav class="nav_checkout">
+                {% include "blocks/info_footer.html" %}
+                {% include "blocks/fullMenu.html" %}
+            </nav>
             <div class="site_info">
                 <span>© Фетч-команда, 2019</span>
                 <a href="">Правила обработки персональных данных</a>

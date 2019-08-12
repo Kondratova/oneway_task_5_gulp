@@ -1,0 +1,16 @@
+{% set item_catalog = [
+{title: "Maison Margiela Fusion Low Sneakers", subcategory: "Кроссовки", price: "92000 ", src: "assets/img/item/1/img.webp"},
+{title: "Maison Margiela Fusion Low Sneakers", subcategory: "Кроссовки", price: "92000 ", src: "assets/img/item/2/zhenskie-krossovki-adidas-originals-falcon-zip-active-gold-core-black-cloud-white-0_676x676.webp"},
+{title: "Maison Margiela Fusion Low Sneakers", subcategory: "Кроссовки", price: "92000 ", src: "assets/img/item/3/zhenskie-krossovki-nike-m2k-tekno-se-laser-fuchsia-black-white-0_450x450.webp"},
+] %}
+
+{% for i in 0..1 %}
+{% for item in item_catalog  %}
+<div class="slide">
+    <img src="{{ item.src }}" alt="">
+    <p class="title"><a href="">{{ item.title }}</a></p>
+    <p class="subcategory">{{ item.subcategory }}</p>
+    <p class="price">{{ item.price }}</p>
+</div>
+{%  endfor %}
+{%  endfor %}

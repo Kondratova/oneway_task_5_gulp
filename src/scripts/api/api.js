@@ -74,6 +74,90 @@ window.API = {
                 price: "92000 ",
                 src: "assets/img/item/3/zhenskie-krossovki-nike-m2k-tekno-se-laser-fuchsia-black-white-0_450x450.webp"
             },
+            {
+                id: "4",
+                title: "Maison Margiela Fusion Low Sneakers",
+                subcategory: "Кроссовки",
+                price: "92000 ",
+                src: "assets/img/item/1/img.webp"
+            },
+            {
+                id: "5",
+                title: "Maison Margiela Fusion Low Sneakers",
+                subcategory: "Кроссовки",
+                price: "92000 ",
+                src: "assets/img/item/2/zhenskie-krossovki-adidas-originals-falcon-zip-active-gold-core-black-cloud-white-0_676x676.webp"
+            },
+            {
+                id: "6",
+                title: "Maison Margiela Fusion Low Sneakers",
+                subcategory: "Кроссовки",
+                price: "92000 ",
+                src: "assets/img/item/3/zhenskie-krossovki-nike-m2k-tekno-se-laser-fuchsia-black-white-0_450x450.webp"
+            },
+            {
+                id: "7",
+                title: "Maison Margiela Fusion Low Sneakers",
+                subcategory: "Кроссовки",
+                price: "92000 ",
+                src: "assets/img/item/1/img.webp"
+            },
+            {
+                id: "8",
+                title: "Maison Margiela Fusion Low Sneakers",
+                subcategory: "Кроссовки",
+                price: "92000 ",
+                src: "assets/img/item/2/zhenskie-krossovki-adidas-originals-falcon-zip-active-gold-core-black-cloud-white-0_676x676.webp"
+            },
+            {
+                id: "9",
+                title: "Maison Margiela Fusion Low Sneakers",
+                subcategory: "Кроссовки",
+                price: "92000 ",
+                src: "assets/img/item/3/zhenskie-krossovki-nike-m2k-tekno-se-laser-fuchsia-black-white-0_450x450.webp"
+            },
+            {
+                id: "10",
+                title: "Maison Margiela Fusion Low Sneakers",
+                subcategory: "Кроссовки",
+                price: "92000 ",
+                src: "assets/img/item/1/img.webp"
+            },
+            {
+                id: "11",
+                title: "Maison Margiela Fusion Low Sneakers",
+                subcategory: "Кроссовки",
+                price: "92000 ",
+                src: "assets/img/item/2/zhenskie-krossovki-adidas-originals-falcon-zip-active-gold-core-black-cloud-white-0_676x676.webp"
+            },
+            {
+                id: "12",
+                title: "Maison Margiela Fusion Low Sneakers",
+                subcategory: "Кроссовки",
+                price: "92000 ",
+                src: "assets/img/item/3/zhenskie-krossovki-nike-m2k-tekno-se-laser-fuchsia-black-white-0_450x450.webp"
+            },
+            {
+                id: "13",
+                title: "Maison Margiela Fusion Low Sneakers",
+                subcategory: "Кроссовки",
+                price: "92000 ",
+                src: "assets/img/item/1/img.webp"
+            },
+            {
+                id: "14",
+                title: "Maison Margiela Fusion Low Sneakers",
+                subcategory: "Кроссовки",
+                price: "92000 ",
+                src: "assets/img/item/2/zhenskie-krossovki-adidas-originals-falcon-zip-active-gold-core-black-cloud-white-0_676x676.webp"
+            },
+            {
+                id: "15",
+                title: "Maison Margiela Fusion Low Sneakers",
+                subcategory: "Кроссовки",
+                price: "92000 ",
+                src: "assets/img/item/3/zhenskie-krossovki-nike-m2k-tekno-se-laser-fuchsia-black-white-0_450x450.webp"
+            },
         ];
 
         return items;
