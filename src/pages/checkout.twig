@@ -22,7 +22,7 @@
 
             <div class="wrapper_form_checkout">
                 <form action="">
-                    <section>
+                    <section class="input">
                         <label for="email">Эл. почта</label>
                         <div class="wrapper_input">
                             <input id="email" type="email" placeholder="petrov@yandex.ru">
@@ -43,10 +43,14 @@
                                       placeholder="Тимирязевская, 32, квартира 99, вход со двора"></textarea>
                         </div>
                     </section>
-                    <section>
+                    <section class="submit">
+                        <div class="wrapper_text">
                         <p>Бесплатная доставка курьером.</p>
                         <p>Оплата картой онлайн.</p>
-                        <button type="submit">Оформить заказ, <span class="price js_price"></span></button>
+                        </div>
+                        <div class="wrapper_button">
+                            <button type="submit">Оформить заказ, <span class="price js_price"></span></button>
+                        </div>
                     </section>
                 </form>
             </div>
@@ -65,10 +69,10 @@
     </div>
 </div>
 
-<div class="wrapper_footer wrapper_footer_checkout">
+<div class="wrapper_footer normal_wrapper_footer">
     <div class="container">
         <footer>
-            <nav class="nav_checkout">
+            <nav>
                 {% include "blocks/info_footer.html" %}
                 {% include "blocks/fullMenu.html" %}
             </nav>
@@ -76,6 +80,19 @@
                 <span>© Фетч-команда, 2019</span>
                 <a href="">Правила обработки персональных данных</a>
                 <a href="">Разработка и поддержка сайта</a>
+            </div>
+        </footer>
+    </div>
+</div>
+
+<div class="wrapper_footer_checkout">
+    <div class="container">
+        <footer>
+            <div class="site_info">
+                <span>© Фетч-команда, 2019</span>
+                <span>8 800 912-11-42, звонок бесплатный</span>
+                <a href="">shop@fetch.ru</a>
+                <a href="">Правила обработки персональных данных</a>
             </div>
         </footer>
     </div>

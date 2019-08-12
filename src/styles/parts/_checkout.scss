@@ -1,9 +1,17 @@
-.checkout_header, .nav_checkout, .interesting_checkout {
+.checkout_header, .normal_wrapper_footer, .interesting_checkout {
   display: var(--display-header-checkout);
 }
 
 .wrapper_footer_checkout {
   background: var(--background-wrapper-footer);
+
+  .site_info {
+    grid-template-columns: repeat(4, max-content);
+
+    @media screen and (max-width: $screen-jg) {
+      grid-template-columns: 1fr;
+    }
+  }
 }
 
 .title_h1_checkout {
@@ -17,10 +25,6 @@
   display: grid;
   grid-template-columns: 464px 488px;
   grid-gap: 0 88px;
-
-  > * {
-    outline: magenta solid 1px;
-  }
 
   .selected_products {
     .item {
@@ -61,17 +65,25 @@
         margin-top: 15px;
       }
     }
+
+    @media screen and (max-width: $screen-jg) {
+      order: -1;
+      .item {
+        width: 100%;
+      }
+    }
   }
 
   .wrapper_form_checkout {
 
-    section {
+    .input {
+      margin-bottom: 5px;
+      padding-left: 24px;
       display: grid;
       grid-template-columns: max-content 1fr;
 
       label {
         padding-right: 40px;
-        padding-left: 24px;
         line-height: 42px;
       }
 
@@ -111,11 +123,54 @@
     textarea {
       resize: none;
     }
+
+    .submit {
+      background: #F2F2F2;
+      padding: 24px 24px 20px 24px;
+      display: grid;
+      grid-template-columns: 130px 1fr;
+      grid-gap: 40px;
+
+      .wrapper_text {
+        margin-top: 4px;
+      }
+
+      p {
+        font-size: 13px;
+        line-height: 17px;
+
+        &:first-child {
+          padding-right: 15px;
+        }
+      }
+    }
+    @media screen and (max-width: $screen-jg) {
+      .input, .submit {
+        grid-template-columns: 1fr;
+        padding-left: 16px;
+      }
+
+      .input {
+      }
+    }
+  }
+
+  button {
+    font-size: inherit;
+    line-height: inherit;
+    font-family: inherit;
+    font-weight: bold;
+    padding: 11px 19px 10px 18px;
+    background: linear-gradient(180deg, #FFC908 0%, #FFBA08 100%);
+    box-shadow: 0 0 15px rgba(255, 146, 17, 0.5);
+    border: none;
+    border-radius: 4px;
   }
 
   .selected_products_price {
     text-align: right;
     margin-bottom: 80px;
+    border-top: #DDDDDD solid 1px;
 
     .price {
       font-size: 24px;
@@ -128,6 +183,10 @@
       font-size: 13px;
       line-height: 17px;
       color: #666666;
+    }
+
+    @media screen and (max-width: $screen-jg) {
+      order: -1;
     }
   }
 
