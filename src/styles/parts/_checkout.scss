@@ -1,5 +1,5 @@
-.checkout_header, .normal_wrapper_footer, .interesting_checkout {
-  display: var(--display-header-checkout);
+.hide_block {
+  display: var(--display-header-checkout) !important;
 }
 
 .wrapper_footer_checkout {

@@ -29,7 +29,7 @@
 <body class="js_checkout">
 
 <div class="container">
-    <header class="checkout_header">
+    <header class="checkout_header hide_block">
         <div class="logo">Фетч</div>
 
         <nav>
@@ -51,9 +51,9 @@
     </header>
 </div>
 
-<div class="container">
+<div class="container" id="container_checkout">
     <div class="title_h1_checkout">
-        Фетч • Оформление заказа
+        <p>Фетч • Оформление заказа</p>
     </div>
     <div class="wrapper_checkout">
         <div class="checkout">
@@ -61,7 +61,7 @@
             </div>
 
             <div class="wrapper_form_checkout">
-                <form action="">
+                <form action="" class="js_form">
                     <section class="input">
                         <label for="email">Эл. почта</label>
                         <div class="wrapper_input">
@@ -100,6 +100,12 @@
                 <p class="text">Доставка бесплатно</p>
             </div>
         </div>
+    </div>
+</div>
+
+<div class="container container_checkout_success hide_block">
+    <div class="title_h1_checkout">
+        <p>Заказ №<span class="order_number"></span> оформлен</p>
     </div>
     <div class="interesting interesting_checkout">
         <p>Вам может быть интересно</p>
@@ -155,7 +161,7 @@
     </div>
 </div>
 
-<div class="wrapper_footer normal_wrapper_footer">
+<div class="wrapper_footer normal_wrapper_footer hide_block">
     <div class="container">
         <footer>
             <nav>

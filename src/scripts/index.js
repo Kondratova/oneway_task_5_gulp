@@ -1,13 +1,13 @@
 // Возьмём дебаунс из интернета, отложим в хелперы.
-import {initSliderMain, initInterestingSliderCardProduct, initInterestingSliderCheckout} from './parts/sliders';
+import {initSliderMain, initInterestingSliderCardProduct} from './parts/sliders';
 import initCatalog from './parts/initCatalog';
 import showTableSize from './parts/showTableSize';
 import initCardProduct from './parts/initCardProduct'
 import handleFormBuyProductSubmit from './parts/handleFormBuyProductSubmit';
 import {showPurchasedItemsNumber} from './parts/showPurchasedItemsNumber';
 import initCheckout from './parts/initCheckout'
+import handleCheckoutFormSubmit from './parts/handleCheckoutFormSubmit';
 
-// import handleFormSubmit from './parts/handleFormSubmit';
 // import listenerForm from './parts/listenerForm'
 
 
@@ -31,11 +31,8 @@ $(() => {
 
     if ($('.js_checkout').length) {
         initCheckout();
-        initInterestingSliderCheckout();
+        handleCheckoutFormSubmit();
     }
-
-    // handleFormSubmit();
-    // listenerForm ();
 });
 
 // localStorage.clear()

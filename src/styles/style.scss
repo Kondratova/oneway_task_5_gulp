@@ -51,10 +51,6 @@ body {
   grid-template-columns: 100%;
   position: relative;
 
-  >* {
-    outline: red solid 1px;
-  }
-
   @media screen and (max-width: $screen-jg) {
     width: 100vw;
   }

@@ -12,10 +12,6 @@ function showSelectedProducts(products) {
 }
 
 function showSelectedProductsPrice(products) {
-    /*let prise = products.reduce( (sum, item) => {
-        return sum + (+item.price);
-    },0);*/
-
     $('.js_price').html(products.reduce((sum, item) => {
         return sum + (+item.price);
     }, 0) + ' ')

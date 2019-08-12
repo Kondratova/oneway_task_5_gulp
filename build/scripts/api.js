@@ -1,10 +1,10 @@
 window.API = {
-    // Отправка формы
-
-    onFormSubmit: function (params, callbackSuccess, callbackFailed) {
+    // Отправка формы покупки товаров
+    onFormSubmit: function (params, products, callbackSuccess, callbackFailed) {
         // Отслеживание запросов на сервер
         console.groupCollapsed(('onFormSubmit'));
         console.log(params);
+        console.log(products);
         console.groupEnd();
 
         // эмуляция ответа сервера на фронтенде
@@ -12,7 +12,8 @@ window.API = {
             var serverResponseSuccess = true;
 
             if(serverResponseSuccess) {
-                callbackSuccess();
+                let orderNumber = 213;
+                callbackSuccess(orderNumber);
             } else  {
                 var errors = [{fieldName: 'pasword', message: "Неверная эл. почта или пароль"}];
                 callbackFailed(errors);
