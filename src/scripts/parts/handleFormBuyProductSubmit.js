@@ -18,20 +18,27 @@ function rememberBuyProduct(item) {
 
 
 export default function handleFormBuyProductSubmit(item) {
+
+
     $('.js_btn_buy_product').on('click', e => {
         e.preventDefault();
 
-        let product = {
-            id: item.id,
-            title: item.title,
-            subcategory: item.subcategory,
-            price: item.price,
-            src: item.srcSmall[0],
-            color: $("input[name=\"color\"]:checked").val(),
-            size: $("input[name=\"size\"]:checked").val(),
-        };
+        let color = $("input[name=\"color\"]:checked").val();
+        let size = $("input[name=\"size\"]:checked").val();
 
-        rememberBuyProduct(product);
-        showPurchasedItemsNumber();
+        if (color && size) {
+            let product = {
+                id: item.id,
+                title: item.title,
+                subcategory: item.subcategory,
+                price: item.price,
+                src: item.srcSmall[0],
+                color: color,
+                size: size,
+            };
+
+            rememberBuyProduct(product);
+            showPurchasedItemsNumber();
+        }
     });
 }

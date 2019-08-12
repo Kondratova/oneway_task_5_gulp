@@ -36,6 +36,21 @@
 
     <div class="block_table_size mfp-hide white-popup" id="block_table_size">
         <p class="close">Таблица размеров</p>
+        {% set sizes = [
+            {country: 'US', sizes: ['4', '4,5', '5', '5,5', '6', '6,5', '7']},
+            {country: 'UK', sizes: ['3,5', '4', '4,5', '6', '5,5', '6', '6,5']},
+            {country: 'EU', sizes: ['36', '37', '38', '39', '40', '41', '42']}
+        ] %}
+        <table>
+            {% for item in sizes %}
+                <tr>
+                    <td class="country">{{ item.country }}</td>
+                    {% for size in item.sizes %}
+                        <td>{{ size }}</td>
+                    {% endfor %}
+                </tr>
+            {% endfor %}
+        </table>
     </div>
 </div>
 

@@ -1,10 +1,10 @@
 {% set fotoMainSlider =[
-{src:'assets/img/main_slider_1.webp', description: 'Reebok Aztrek Double'},
-{src:'assets/img/main_slider_2.webp', description: 'Распродажа до −15%'},
-{src:'assets/img/main_slider_3.webp', description: 'Nike ACG: навстречу новым открытиям'}
+{data-header-theme: "light", data-text-color: "black", src:'assets/img/main_slider_1.webp', description: 'Reebok Aztrek Double'},
+{data-header-theme: "dark", data-text-color: "white", src:'assets/img/main_slider_2.webp', description: 'Распродажа до −15%'},
+{data-header-theme: "dark", data-text-color: "white", src:'assets/img/main_slider_3.webp', description: 'Nike ACG: навстречу новым открытиям'}
 ] %}
 {% for item in fotoMainSlider %}
-<div class="slide">
+<div data-header-theme="{{ item.data-header-theme }}" data-text-color="{{ item.data-text-color }}" class="slide">
     <img src="{{ item.src }}" alt="{{ item.description }}">
     <div class="slide_text">
         <div class="container">

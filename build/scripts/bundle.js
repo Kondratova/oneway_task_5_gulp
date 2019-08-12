@@ -55,7 +55,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
   function o(e) {
     var t = window.API.onCatalogPage(e);
     $(".catalog").html(t.map(function (e) {
-        return "<div class=\"item\" id=\"".concat(e.id, "\">\n                <img src=\"").concat(e.src, "\" alt=\"").concat(e.title, "\">\n                <p class=\"title\"><a href=\"\">").concat(e.title, "</a></p>\n                <p class=\"subcategory\">").concat(e.subcategory, "</p>\n                <p class=\"price\">").concat(e.price, "</p>\n            </div>");
+      return "<div class=\"item\" id=\"".concat(e.id, "\">\n                <img src=\"").concat(e.src, "\" alt=\"").concat(e.title, "\">\n                <p class=\"title\"><a href=\"\">").concat(e.title, "</a></p>\n                <p class=\"subcategory\">").concat(e.subcategory, "</p>\n                <p class=\"price\">").concat(e.price, "</p>\n            </div>");
     }));
   }
 
@@ -78,11 +78,11 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
     }(), r();
   }
 
-    function i(e, t) {
+  function i(e, t) {
     $(".js_slider_product_for").html(e.map(function (e) {
-        return "<div class=\"slide\"><img src=\"".concat(e, "\" alt=\"\u0418\u0437\u043E\u0431\u0440\u0430\u0436\u0435\u043D\u0438\u0435\"></div>");
+      return "<div class=\"slide\"><img src=\"".concat(e, "\" alt=\"\u0418\u0437\u043E\u0431\u0440\u0430\u0436\u0435\u043D\u0438\u0435\"></div>");
     })), $(".js_slider_product_nav").html(t.map(function (e) {
-        return "<div class=\"slide\"><img src=\"".concat(e, "\" alt=\"\u0418\u0437\u043E\u0431\u0440\u0430\u0436\u0435\u043D\u0438\u0435\"></div>");
+      return "<div class=\"slide\"><img src=\"".concat(e, "\" alt=\"\u0418\u0437\u043E\u0431\u0440\u0430\u0436\u0435\u043D\u0438\u0435\"></div>");
     })), $(".js_slider_product_for").slick({
       slidesToShow: 1,
       slidesToScroll: 1,
@@ -101,7 +101,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
 
   function n() {
     var e = window.API.onCardProduct(1);
-      var t, s, o, r, l, n, c, a, p, u;
+    var t, s, o, r, l, n, c, a, p, u;
     return t = e.id, document.body.id = t, s = e.title, $(".js_title_h1").html("<p>".concat(s, "</p>")), o = e.subcategory, $(".js_subcategory").html("<p>".concat(o, "</p>")), r = e.colors, $(".js_wrapper_content_color").html(r.map(function (e) {
       return "<input type=\"radio\" name=\"color\" id=\"".concat(e.colorId, "\" value=\"").concat(e.color, "\">\n         <label for=\"").concat(e.colorId, "\">").concat(e.color, "</label>");
     })), l = e.sizes, $(".js_wrapper_content_size").html(l.map(function (e) {
@@ -113,32 +113,38 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
     })), i(e.srcBig, e.srcSmall), e;
   }
 
-    function c() {
+  function c() {
     var e = JSON.parse(localStorage.getItem("purchasedProducts"));
     null !== e && e.length && $(".js_link_basket").attr("data-before", "".concat(e.length));
   }
 
   function a(e) {
     $(".js_btn_buy_product").on("click", function (t) {
-      t.preventDefault(), function (e) {
-        if (null === localStorage.getItem("purchasedProducts")) {
-          var _t = JSON.stringify([e]);
+      t.preventDefault();
+      var s = $('input[name="color"]:checked').val(),
+          o = $('input[name="size"]:checked').val();
 
-          localStorage.setItem("purchasedProducts", _t);
-        } else {
-          var _t2 = JSON.parse(localStorage.getItem("purchasedProducts"));
+      if (s && o) {
+        !function (e) {
+          if (null === localStorage.getItem("purchasedProducts")) {
+            var _t = JSON.stringify([e]);
 
-          _t2.push(e), localStorage.setItem("purchasedProducts", JSON.stringify(_t2));
-        }
-      }({
-        id: e.id,
-        title: e.title,
-        subcategory: e.subcategory,
-        price: e.price,
-        src: e.srcSmall[0],
-        color: $('input[name="color"]:checked').val(),
-        size: $('input[name="size"]:checked').val()
-      }), c();
+            localStorage.setItem("purchasedProducts", _t);
+          } else {
+            var _t2 = JSON.parse(localStorage.getItem("purchasedProducts"));
+
+            _t2.push(e), localStorage.setItem("purchasedProducts", JSON.stringify(_t2));
+          }
+        }({
+          id: e.id,
+          title: e.title,
+          subcategory: e.subcategory,
+          price: e.price,
+          src: e.srcSmall[0],
+          color: s,
+          size: o
+        }), c();
+      }
     });
   }
 
@@ -146,38 +152,38 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
     var e = JSON.parse(localStorage.getItem("purchasedProducts"));
     !function (e) {
       $(".selected_products").html(e.map(function (e) {
-          return "<div class=\"item\" id=\"".concat(e.id, "\">\n                <img src=\"").concat(e.src, "\" alt=\"").concat(e.title, "\">\n                <div class=\"info_item\">\n                    <p class=\"title\"><a href=\"\">").concat(e.title, "</a></p>\n                    <p class=\"subcategory\">").concat(e.subcategory, "</p>\n                    <p class=\"price\">").concat(e.price, "</p>\n                </div>\n            </div>");
+        return "<div class=\"item\" id=\"".concat(e.id, "\">\n                <img src=\"").concat(e.src, "\" alt=\"").concat(e.title, "\">\n                <div class=\"info_item\">\n                    <p class=\"title\"><a href=\"\">").concat(e.title, "</a></p>\n                    <p class=\"subcategory\">").concat(e.subcategory, "</p>\n                    <p class=\"price\">").concat(e.price, "</p>\n                </div>\n            </div>");
       }));
     }(e), function (e) {
-        null !== e && $(".js_price").html(e.reduce(function (e, t) {
+      null !== e && $(".js_price").html(e.reduce(function (e, t) {
         return e + +t.price;
       }, 0) + " ");
     }(e);
   }
 
-    function u() {
-        $(".js_form").on("submit", function (e) {
-            e.preventDefault();
-            var t = {
-                    formData: $(e.target).serializeArray()
-                },
-                s = JSON.parse(localStorage.getItem("purchasedProducts"));
-            window.API.onFormSubmit(t, s, function (e) {
-                console.log("Успешно!"), $("#container_checkout, .wrapper_footer_checkout ").addClass("hide_block"), function (e) {
-                    $(".checkout_header, .normal_wrapper_footer, .interesting_checkout, .container.container_checkout_success").removeClass("hide_block"), $(".order_number").html(e);
-                }(e), $(".js_slider_interesting_checkout").slick({
-                    slidesToShow: 4,
-                    slidesToScroll: 1,
-                    swipeToSlide: !0,
-                    responsive: [{
-                        breakpoint: 1200,
-                        settings: {
-                            slidesToShow: 1,
-                            swipeToSlide: !0,
-                            arrows: !1
-                        }
-                    }]
-                });
+  function u() {
+    $(".js_form").on("submit", function (e) {
+      e.preventDefault();
+      var t = {
+        formData: $(e.target).serializeArray()
+      },
+          s = JSON.parse(localStorage.getItem("purchasedProducts"));
+      window.API.onFormSubmit(t, s, function (e) {
+        console.log("Успешно!"), $("#container_checkout, .wrapper_footer_checkout ").addClass("hide_block"), function (e) {
+          $(".checkout_header, .normal_wrapper_footer, .interesting_checkout, .container.container_checkout_success").removeClass("hide_block"), $(".order_number").html(e);
+        }(e), $(".js_slider_interesting_checkout").slick({
+          slidesToShow: 4,
+          slidesToScroll: 1,
+          swipeToSlide: !0,
+          responsive: [{
+            breakpoint: 1200,
+            settings: {
+              slidesToShow: 1,
+              swipeToSlide: !0,
+              arrows: !1
+            }
+          }]
+        });
       }, function (e) {
         console.group("Ошибка!"), e.forEach(function (e) {
           console.log("".concat(e.filedName, ": ").concat(e.message));
@@ -187,7 +193,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
   }
 
   s.r(t), $(function () {
-      if (c(), $(".js_home_page").length && $(".js_slider_main").slick({
+    if (c(), $(".js_home_page").length && $(".js_slider_main").slick({
       slidesToShow: 1,
       slidesToScroll: 1,
       arrows: !0,
@@ -219,6 +225,6 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
       });
     }
 
-      $(".js_checkout").length && (p(), u());
+    $(".js_checkout").length && (p(), u());
   });
 }]);

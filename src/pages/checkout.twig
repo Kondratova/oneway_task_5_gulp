@@ -26,22 +26,24 @@
                     <section class="input">
                         <label for="email">Эл. почта</label>
                         <div class="wrapper_input">
-                            <input id="email" type="email" placeholder="petrov@yandex.ru">
+                            <input id="email" type="email" placeholder="petrov@yandex.ru" required
+                                   pattern="\S+@[a-z]+.[a-z]+">
                             <p>Пришлём чеки и трек-номер</p>
                         </div>
                         <label for="telephone">Телефон</label>
                         <div class="wrapper_input">
-                            <input id="telephone" type="tel" placeholder="+7 999 275-12-37">
+                            <input id="telephone" type="tel" placeholder="+7 999 275-12-37" required
+                                   pattern="\+7\s?[\(]{0,1}9[0-9]{2}[\)]{0,1}\s?\d{3}[-]{0,1}\d{2}[-]{0,1}\d{2}">
                             <p>Менеджер позвонит, чтобы подтвердить заказ</p>
                         </div>
                         <label for="city">Город</label>
                         <div class="wrapper_input">
-                            <input id="city" type="text" placeholder="Москва">
+                            <input id="city" type="text" placeholder="Москва" required>
                         </div>
                         <label for="address">Адрес</label>
                         <div class="wrapper_input">
                             <textarea id="address" name="comment" cols="40" rows="3"
-                                      placeholder="Тимирязевская, 32, квартира 99, вход со двора"></textarea>
+                                      placeholder="Тимирязевская, 32, квартира 99, вход со двора" required></textarea>
                         </div>
                     </section>
                     <section class="submit">
