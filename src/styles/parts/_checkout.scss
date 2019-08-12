@@ -165,6 +165,10 @@
     box-shadow: 0 0 15px rgba(255, 146, 17, 0.5);
     border: none;
     border-radius: 4px;
+
+    &:hover {
+      background: linear-gradient(180deg, #F5BF00 0%, #F0AD00 100%);
+    }
   }
 
   .selected_products_price {

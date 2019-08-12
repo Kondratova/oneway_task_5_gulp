@@ -7,6 +7,7 @@
 
 <div class="container">
     <header>
+        <div class="logo"><a href="index.html">Фетч</a></div>
         {% include "blocks/header.html" %}
     </header>
 </div>
@@ -29,7 +30,7 @@
         {% for i in 0..4 %}
         {% for item in item_catalog  %}
         <div class="item">
-            <img src="{{ item.src }}" alt="">
+            <img src="{{ item.src }}" alt="{{ item.title }}">
             <p class="title"><a href="">{{ item.title }}</a></p>
             <p class="subcategory">{{ item.subcategory }}</p>
             <p class="price">{{ item.price }}</p>

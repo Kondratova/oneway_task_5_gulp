@@ -1,5 +1,32 @@
 //Свой шрифт
-
 @font-face {
+  font-family: 'icon';
+  src: url('../assets/fonts/icon.woff2?57038364') format('woff2'),
+  url('../assets/fonts/icon.woff?57038364') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
 
+[class^="icon-"]:before, [class*=" icon-"]:before {
+  font-family: "icon";
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+  display: inline-block;
+}
+
+.i-arr-right:before {
+  content: '\e800';
+}
+
+.i-icon-cart:before {
+  content: '\e801';
+}
+
+.i-arr-left:before {
+  content: '\e802';
+}
+
+.i-icon-cross:before {
+  content: '\e803';
 }

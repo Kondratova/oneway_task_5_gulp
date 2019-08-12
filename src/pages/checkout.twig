@@ -7,6 +7,7 @@
 
 <div class="container">
     <header class="checkout_header hide_block">
+        <div class="logo"><a href="index.html">Фетч</a></div>
         {% include "blocks/header.html" %}
     </header>
 </div>
@@ -56,7 +57,7 @@
             </div>
 
             <div class="selected_products_price">
-                <p class="price js_price">Выбранные товары</p>
+                <p class="price js_price">0</p>
                 <p class="text">Доставка бесплатно</p>
             </div>
         </div>
@@ -66,6 +67,10 @@
 <div class="container container_checkout_success hide_block">
     <div class="title_h1_checkout">
         <p>Заказ №<span class="order_number"></span> оформлен</p>
+    </div>
+    <div>
+        <p>Скоро вам позвонит менеджер, чтобы подтвердить заказ.</p>
+        <p><a href="">Вернуться на главную</a> или <a href="">продолжить покупки в каталоге</a></p>
     </div>
     <div class="interesting interesting_checkout">
         <p>Вам может быть интересно</p>

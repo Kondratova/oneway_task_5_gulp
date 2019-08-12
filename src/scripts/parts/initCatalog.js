@@ -35,7 +35,7 @@ function changeItemCatalog(numberPage) {
 
     $('.catalog').html(itemsValue.map(item =>
         `<div class="item" id="${ item.id }">
-                <img src="${ item.src }" alt="">
+                <img src="${ item.src }" alt="${ item.title }">
                 <p class="title"><a href="">${ item.title }</a></p>
                 <p class="subcategory">${ item.subcategory }</p>
                 <p class="price">${ item.price }</p>

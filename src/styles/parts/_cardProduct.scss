@@ -83,6 +83,9 @@
         line-height: inherit;
         font-family: inherit;
 
+        &:hover {
+          background: linear-gradient(180deg, #F5BF00 0%, #F0AD00 100%);
+        }
       }
     }
 
@@ -236,7 +239,7 @@
     width: 100%;
 
     :before {
-      color: red;
+      color: black;
     }
   }
 

@@ -8,9 +8,7 @@ function hideForm() {
 //На месте формы высвечиваем сообщение об успехе
 function showMassageSuccess(orderNumber) {
     $('.checkout_header, .normal_wrapper_footer, .interesting_checkout, .container.container_checkout_success').removeClass("hide_block");
-    ;
     $('.order_number').html(orderNumber);
-    initInterestingSliderCheckout();
 }
 
 export default function handleFormSubmit() {
@@ -30,6 +28,7 @@ export default function handleFormSubmit() {
             console.log('Успешно!');
             hideForm();
             showMassageSuccess(orderNumber);
+            initInterestingSliderCheckout();
         };
 
         const callbackError = errors => {

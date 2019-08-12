@@ -53,11 +53,11 @@ function showDetails(details) {
 function showSliderProduct(srcBig, srcSmall) {
 
     $('.js_slider_product_for').html(srcBig.map(src =>
-        `<div class="slide"><img src="${src}" alt=""></div>`
+        `<div class="slide"><img src="${src}" alt="Изображение"></div>`
     ));
 
     $('.js_slider_product_nav').html(srcSmall.map(src =>
-        `<div class="slide"><img src="${src}" alt=""></div>`
+        `<div class="slide"><img src="${src}" alt="Изображение"></div>`
     ));
 
     initSliderProductFor();
@@ -70,7 +70,7 @@ function showSliderProduct(srcBig, srcSmall) {
 
     item.src.forEach( (src) => {
         arrIinterestingSlide.push(`
-            <div class="slide"><img src="${src}" alt=""></div>
+            <div class="slide"><img src="${src}" alt="Изображение"></div>
         `)}
     );
     $('.js_slider_product_for').html(arrIinterestingSlide.join(' '));

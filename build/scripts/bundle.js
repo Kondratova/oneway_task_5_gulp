@@ -55,7 +55,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
   function o(e) {
     var t = window.API.onCatalogPage(e);
     $(".catalog").html(t.map(function (e) {
-      return "<div class=\"item\" id=\"".concat(e.id, "\">\n                <img src=\"").concat(e.src, "\" alt=\"\">\n                <p class=\"title\"><a href=\"\">").concat(e.title, "</a></p>\n                <p class=\"subcategory\">").concat(e.subcategory, "</p>\n                <p class=\"price\">").concat(e.price, "</p>\n            </div>");
+        return "<div class=\"item\" id=\"".concat(e.id, "\">\n                <img src=\"").concat(e.src, "\" alt=\"").concat(e.title, "\">\n                <p class=\"title\"><a href=\"\">").concat(e.title, "</a></p>\n                <p class=\"subcategory\">").concat(e.subcategory, "</p>\n                <p class=\"price\">").concat(e.price, "</p>\n            </div>");
     }));
   }
 
@@ -78,11 +78,11 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
     }(), r();
   }
 
-  function c(e, t) {
+    function i(e, t) {
     $(".js_slider_product_for").html(e.map(function (e) {
-      return "<div class=\"slide\"><img src=\"".concat(e, "\" alt=\"\"></div>");
+        return "<div class=\"slide\"><img src=\"".concat(e, "\" alt=\"\u0418\u0437\u043E\u0431\u0440\u0430\u0436\u0435\u043D\u0438\u0435\"></div>");
     })), $(".js_slider_product_nav").html(t.map(function (e) {
-      return "<div class=\"slide\"><img src=\"".concat(e, "\" alt=\"\"></div>");
+        return "<div class=\"slide\"><img src=\"".concat(e, "\" alt=\"\u0418\u0437\u043E\u0431\u0440\u0430\u0436\u0435\u043D\u0438\u0435\"></div>");
     })), $(".js_slider_product_for").slick({
       slidesToShow: 1,
       slidesToScroll: 1,
@@ -101,19 +101,19 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
 
   function n() {
     var e = window.API.onCardProduct(1);
-    var t, s, o, r, l, n, i, a, p, u;
+      var t, s, o, r, l, n, c, a, p, u;
     return t = e.id, document.body.id = t, s = e.title, $(".js_title_h1").html("<p>".concat(s, "</p>")), o = e.subcategory, $(".js_subcategory").html("<p>".concat(o, "</p>")), r = e.colors, $(".js_wrapper_content_color").html(r.map(function (e) {
       return "<input type=\"radio\" name=\"color\" id=\"".concat(e.colorId, "\" value=\"").concat(e.color, "\">\n         <label for=\"").concat(e.colorId, "\">").concat(e.color, "</label>");
     })), l = e.sizes, $(".js_wrapper_content_size").html(l.map(function (e) {
       return "<input type=\"radio\" name=\"size\" id=\"".concat(e.sizeId, "\" value=\"").concat(e.size, "\">\n            <label for=\"").concat(e.sizeId, "\">").concat(e.size, "</label>");
-    })), n = e.price, $(".js_price").html(n), i = e.material, $(".js_wrapper_content_material").html("<p class=\"content\">".concat(i, "</p>")), a = e.country, $(".js_wrapper_content_country").html("<p class=\"content\">".concat(a, "</p>")), p = e.description, $(".js_wrapper_content_description").html(p.map(function (e) {
+    })), n = e.price, $(".js_price").html(n), c = e.material, $(".js_wrapper_content_material").html("<p class=\"content\">".concat(c, "</p>")), a = e.country, $(".js_wrapper_content_country").html("<p class=\"content\">".concat(a, "</p>")), p = e.description, $(".js_wrapper_content_description").html(p.map(function (e) {
       return "<p class=\"content\">".concat(e, "</p>");
     })), u = e.details, $(".js_wrapper_content_details").html(u.map(function (e) {
       return "<p class=\"content\">".concat(e, "</p>");
-    })), c(e.srcBig, e.srcSmall), e;
+    })), i(e.srcBig, e.srcSmall), e;
   }
 
-  function i() {
+    function c() {
     var e = JSON.parse(localStorage.getItem("purchasedProducts"));
     null !== e && e.length && $(".js_link_basket").attr("data-before", "".concat(e.length));
   }
@@ -138,7 +138,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
         src: e.srcSmall[0],
         color: $('input[name="color"]:checked').val(),
         size: $('input[name="size"]:checked').val()
-      }), i();
+      }), c();
     });
   }
 
@@ -146,40 +146,38 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
     var e = JSON.parse(localStorage.getItem("purchasedProducts"));
     !function (e) {
       $(".selected_products").html(e.map(function (e) {
-        return "<div class=\"item\" id=\"".concat(e.id, "\">\n                <img src=\"").concat(e.src, "\" alt=\"\">\n                <div class=\"info_item\">\n                    <p class=\"title\"><a href=\"\">").concat(e.title, "</a></p>\n                    <p class=\"subcategory\">").concat(e.subcategory, "</p>\n                    <p class=\"price\">").concat(e.price, "</p>\n                </div>\n            </div>");
+          return "<div class=\"item\" id=\"".concat(e.id, "\">\n                <img src=\"").concat(e.src, "\" alt=\"").concat(e.title, "\">\n                <div class=\"info_item\">\n                    <p class=\"title\"><a href=\"\">").concat(e.title, "</a></p>\n                    <p class=\"subcategory\">").concat(e.subcategory, "</p>\n                    <p class=\"price\">").concat(e.price, "</p>\n                </div>\n            </div>");
       }));
     }(e), function (e) {
-      $(".js_price").html(e.reduce(function (e, t) {
+        null !== e && $(".js_price").html(e.reduce(function (e, t) {
         return e + +t.price;
       }, 0) + " ");
     }(e);
   }
 
-  function u(e) {
-    $(".checkout_header, .normal_wrapper_footer, .interesting_checkout, .container.container_checkout_success").removeClass("hide_block"), $(".order_number").html(e), $(".js_slider_interesting_checkout").slick({
-      slidesToShow: 4,
-      slidesToScroll: 1,
-      swipeToSlide: !0,
-      responsive: [{
-        breakpoint: 1200,
-        settings: {
-          slidesToShow: 1,
-          swipeToSlide: !0,
-          arrows: !1
-        }
-      }]
-    });
-  }
-
-  function d() {
-    $(".js_form").on("submit", function (e) {
-      e.preventDefault();
-      var t = {
-        formData: $(e.target).serializeArray()
-      },
-          s = JSON.parse(localStorage.getItem("purchasedProducts"));
-      window.API.onFormSubmit(t, s, function (e) {
-        console.log("Успешно!"), $("#container_checkout, .wrapper_footer_checkout ").addClass("hide_block"), u(e);
+    function u() {
+        $(".js_form").on("submit", function (e) {
+            e.preventDefault();
+            var t = {
+                    formData: $(e.target).serializeArray()
+                },
+                s = JSON.parse(localStorage.getItem("purchasedProducts"));
+            window.API.onFormSubmit(t, s, function (e) {
+                console.log("Успешно!"), $("#container_checkout, .wrapper_footer_checkout ").addClass("hide_block"), function (e) {
+                    $(".checkout_header, .normal_wrapper_footer, .interesting_checkout, .container.container_checkout_success").removeClass("hide_block"), $(".order_number").html(e);
+                }(e), $(".js_slider_interesting_checkout").slick({
+                    slidesToShow: 4,
+                    slidesToScroll: 1,
+                    swipeToSlide: !0,
+                    responsive: [{
+                        breakpoint: 1200,
+                        settings: {
+                            slidesToShow: 1,
+                            swipeToSlide: !0,
+                            arrows: !1
+                        }
+                    }]
+                });
       }, function (e) {
         console.group("Ошибка!"), e.forEach(function (e) {
           console.log("".concat(e.filedName, ": ").concat(e.message));
@@ -189,7 +187,7 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
   }
 
   s.r(t), $(function () {
-    if (i(), $(".js_home_page").length && $(".js_slider_main").slick({
+      if (c(), $(".js_home_page").length && $(".js_slider_main").slick({
       slidesToShow: 1,
       slidesToScroll: 1,
       arrows: !0,
@@ -221,6 +219,6 @@ function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterat
       });
     }
 
-    $(".js_checkout").length && (p(), d());
+      $(".js_checkout").length && (p(), u());
   });
 }]);
